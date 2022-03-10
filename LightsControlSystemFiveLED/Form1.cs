@@ -61,6 +61,7 @@ namespace LightsControlSystemFiveLED
         // all LED variables
         string ON_allLED = "6";
         string OFF_allLED = "f";
+        int countdown_seconds_allLED = 0;
 
 
         public Form1()
@@ -198,6 +199,7 @@ namespace LightsControlSystemFiveLED
 
 
         // LED 1 functions
+        // basic control
         private void btn_ON_LED1_Click(object sender, EventArgs e)
         {
             turn(ON_LED1);
@@ -210,7 +212,57 @@ namespace LightsControlSystemFiveLED
             showImage(OFF_LED1);
         }
 
+        // countdown timer control
+        private void btn_countdownStart1_Click(object sender, EventArgs e)
+        {
+            countdown_seconds1 = Convert.ToInt32(txtbox_countdownTime1.Text);
+            txtbox_countdownTime1.Enabled = false;
+            timer_countdown1.Start();
+            if (rb_countdownON1.Checked)
+            {
+                turn(ON_LED1);
+                showImage(ON_LED1);
+            } else
+            {
+                turn(OFF_LED1);
+                showImage(OFF_LED1);
+            }
+            lbl_countdownSeconds1.Text = countdown_seconds1.ToString();
+        }
+
+        private void timer_countdown1_Tick(object sender, EventArgs e)
+        {
+            countdown_seconds1--;
+            if (countdown_seconds1 == 0)
+            {
+                if (rb_countdownON1.Checked)
+                {
+                    turn(OFF_LED1);
+                    showImage(OFF_LED1);
+                } else
+                {
+                    turn(ON_LED1);
+                    showImage(ON_LED1);
+                }
+                timer_countdown1.Stop();
+                txtbox_countdownTime1.Enabled = true;
+            }
+            lbl_countdownSeconds1.Text = countdown_seconds1.ToString();
+        }
+
+        private void btn_countdownReset1_Click(object sender, EventArgs e)
+        {
+            txtbox_countdownTime1.Enabled = true;
+            turn(OFF_LED1);
+            showImage(OFF_LED1);
+            timer_countdown1.Stop();
+            countdown_seconds1 = 0;
+            lbl_countdownSeconds1.Text = countdown_seconds1.ToString();
+
+        }
+
         // LED 2 functions
+        // basic control
         private void btn_ON_LED2_Click(object sender, EventArgs e)
         {
             turn(ON_LED2);
@@ -223,7 +275,59 @@ namespace LightsControlSystemFiveLED
             showImage(OFF_LED2);
         }
 
+        // countdown timer control
+        private void btn_countdownStart2_Click(object sender, EventArgs e)
+        {
+            countdown_seconds2 = Convert.ToInt32(txtbox_countdownTime2.Text);
+            txtbox_countdownTime2.Enabled = false;
+            timer_countdown2.Start();
+            if (rb_countdownON2.Checked)
+            {
+                turn(ON_LED2);
+                showImage(ON_LED2);
+            }
+            else
+            {
+                turn(OFF_LED2);
+                showImage(OFF_LED2);
+            }
+            lbl_countdownSeconds2.Text = countdown_seconds2.ToString();
+        }
+
+        private void timer_countdown2_Tick(object sender, EventArgs e)
+        {
+            countdown_seconds2--;
+            if (countdown_seconds2 == 0)
+            {
+                if (rb_countdownON2.Checked)
+                {
+                    turn(OFF_LED2);
+                    showImage(OFF_LED2);
+                }
+                else
+                {
+                    turn(ON_LED2);
+                    showImage(ON_LED2);
+                }
+                timer_countdown2.Stop();
+                txtbox_countdownTime2.Enabled = true;
+            }
+            lbl_countdownSeconds2.Text = countdown_seconds2.ToString();
+        }
+
+        private void btn_countdownReset2_Click(object sender, EventArgs e)
+        {
+            txtbox_countdownTime2.Enabled = true;
+            turn(OFF_LED2);
+            showImage(OFF_LED2);
+            timer_countdown2.Stop();
+            countdown_seconds2 = 0;
+            lbl_countdownSeconds2.Text = countdown_seconds2.ToString();
+        }
+
+
         // LED 3 functions
+        // basic control
         private void btn_ON_LED3_Click(object sender, EventArgs e)
         {
             turn(ON_LED3);
@@ -236,7 +340,58 @@ namespace LightsControlSystemFiveLED
             showImage(OFF_LED3);
         }
 
+        // countdown timer control
+        private void btn_countdownStart3_Click(object sender, EventArgs e)
+        {
+            countdown_seconds3 = Convert.ToInt32(txtbox_countdownTime3.Text);
+            txtbox_countdownTime3.Enabled = false;
+            timer_countdown3.Start();
+            if (rb_countdownON3.Checked)
+            {
+                turn(ON_LED3);
+                showImage(ON_LED3);
+            }
+            else
+            {
+                turn(OFF_LED3);
+                showImage(OFF_LED3);
+            }
+            lbl_countdownSeconds3.Text = countdown_seconds3.ToString();
+        }
+
+        private void timer_countdown3_Tick(object sender, EventArgs e)
+        {
+            countdown_seconds3--;
+            if (countdown_seconds3 == 0)
+            {
+                if (rb_countdownON3.Checked)
+                {
+                    turn(OFF_LED3);
+                    showImage(OFF_LED3);
+                }
+                else
+                {
+                    turn(ON_LED3);
+                    showImage(ON_LED3);
+                }
+                timer_countdown3.Stop();
+                txtbox_countdownTime3.Enabled = true;
+            }
+            lbl_countdownSeconds3.Text = countdown_seconds3.ToString();
+        }
+
+        private void btn_countdownReset3_Click(object sender, EventArgs e)
+        {
+            txtbox_countdownTime3.Enabled = true;
+            turn(OFF_LED3);
+            showImage(OFF_LED3);
+            timer_countdown3.Stop();
+            countdown_seconds3 = 0;
+            lbl_countdownSeconds3.Text = countdown_seconds3.ToString();
+        }
+
         // LED 4 functions
+        // basic controls
         private void btn_ON_LED4_Click(object sender, EventArgs e)
         {
             turn(ON_LED4);
@@ -249,7 +404,58 @@ namespace LightsControlSystemFiveLED
             showImage(OFF_LED4);
         }
 
+        // countdown timer control
+        private void btn_countdownStart4_Click(object sender, EventArgs e)
+        {
+            countdown_seconds4 = Convert.ToInt32(txtbox_countdownTime4.Text);
+            txtbox_countdownTime4.Enabled = false;
+            timer_countdown4.Start();
+            if (rb_countdownON4.Checked)
+            {
+                turn(ON_LED4);
+                showImage(ON_LED4);
+            }
+            else
+            {
+                turn(OFF_LED4);
+                showImage(OFF_LED4);
+            }
+            lbl_countdownSeconds4.Text = countdown_seconds4.ToString();
+        }
+
+        private void timer_countdown4_Tick(object sender, EventArgs e)
+        {
+            countdown_seconds4--;
+            if (countdown_seconds4 == 0)
+            {
+                if (rb_countdownON4.Checked)
+                {
+                    turn(OFF_LED4);
+                    showImage(OFF_LED4);
+                }
+                else
+                {
+                    turn(ON_LED4);
+                    showImage(ON_LED4);
+                }
+                timer_countdown4.Stop();
+                txtbox_countdownTime4.Enabled = true;
+            }
+            lbl_countdownSeconds4.Text = countdown_seconds4.ToString();
+        }
+
+        private void btn_countdownReset4_Click(object sender, EventArgs e)
+        {
+            txtbox_countdownTime4.Enabled = true;
+            turn(OFF_LED4);
+            showImage(OFF_LED4);
+            timer_countdown4.Stop();
+            countdown_seconds4 = 0;
+            lbl_countdownSeconds4.Text = countdown_seconds4.ToString();
+        }
+
         // LED 5 functions
+        // basic controls
         private void btn_ON_LED5_Click(object sender, EventArgs e)
         {
             turn(ON_LED5);
@@ -262,7 +468,58 @@ namespace LightsControlSystemFiveLED
             showImage(OFF_LED5);
         }
 
+        // countdown timer control
+        private void btn_countdownStart5_Click(object sender, EventArgs e)
+        {
+            countdown_seconds5 = Convert.ToInt32(txtbox_countdownTime5.Text);
+            txtbox_countdownTime5.Enabled = false;
+            timer_countdown5.Start();
+            if (rb_countdownON5.Checked)
+            {
+                turn(ON_LED5);
+                showImage(ON_LED5);
+            }
+            else
+            {
+                turn(OFF_LED5);
+                showImage(OFF_LED5);
+            }
+            lbl_countdownSeconds5.Text = countdown_seconds5.ToString();
+        }
+
+        private void timer_countdown5_Tick(object sender, EventArgs e)
+        {
+            countdown_seconds5--;
+            if (countdown_seconds5 == 0)
+            {
+                if (rb_countdownON5.Checked)
+                {
+                    turn(OFF_LED5);
+                    showImage(OFF_LED5);
+                }
+                else
+                {
+                    turn(ON_LED5);
+                    showImage(ON_LED5);
+                }
+                timer_countdown5.Stop();
+                txtbox_countdownTime5.Enabled = true;
+            }
+            lbl_countdownSeconds5.Text = countdown_seconds5.ToString();
+        }
+
+        private void btn_countdownReset5_Click(object sender, EventArgs e)
+        {
+            txtbox_countdownTime5.Enabled = true;
+            turn(OFF_LED5);
+            showImage(OFF_LED5);
+            timer_countdown5.Stop();
+            countdown_seconds5 = 0;
+            lbl_countdownSeconds5.Text = countdown_seconds5.ToString();
+        }
+
         // all LED functions
+        // basic controls
         private void btn_ON_allLED_Click(object sender, EventArgs e)
         {
             turn(ON_allLED);
@@ -274,6 +531,56 @@ namespace LightsControlSystemFiveLED
         {
             turn(OFF_allLED);
             showImage(OFF_allLED);
+        }
+
+        // countdown timer control
+        private void btn_countdownStart_allLED_Click(object sender, EventArgs e)
+        {
+            countdown_seconds_allLED = Convert.ToInt32(txtbox_countdownTime_allLED.Text);
+            txtbox_countdownTime_allLED.Enabled = false;
+            timer_countdown_allLED.Start();
+            if (rb_countdownON_allLED.Checked)
+            {
+                turn(ON_allLED);
+                showImage(ON_allLED);
+            }
+            else
+            {
+                turn(OFF_allLED);
+                showImage(OFF_allLED);
+            }
+            lbl_countdownSeconds_allLED.Text = countdown_seconds_allLED.ToString();
+        }
+
+        private void timer_countdown_allLED_Tick(object sender, EventArgs e)
+        {
+            countdown_seconds_allLED--;
+            if (countdown_seconds_allLED == 0)
+            {
+                if (rb_countdownON_allLED.Checked)
+                {
+                    turn(OFF_allLED);
+                    showImage(OFF_allLED);
+                }
+                else
+                {
+                    turn(ON_allLED);
+                    showImage(ON_allLED);
+                }
+                timer_countdown_allLED.Stop();
+                txtbox_countdownTime_allLED.Enabled = true;
+            }
+            lbl_countdownSeconds_allLED.Text = countdown_seconds_allLED.ToString();
+        }
+
+        private void btn_countdownReset_allLED_Click(object sender, EventArgs e)
+        {
+            txtbox_countdownTime_allLED.Enabled = true;
+            turn(OFF_allLED);
+            showImage(OFF_allLED);
+            timer_countdown_allLED.Stop();
+            countdown_seconds_allLED = 0;
+            lbl_countdownSeconds_allLED.Text = countdown_seconds_allLED.ToString();
         }
     }
 }

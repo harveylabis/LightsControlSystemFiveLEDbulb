@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lbl_title = new System.Windows.Forms.Label();
             this.gpb_portControl = new System.Windows.Forms.GroupBox();
             this.cbx_portCOMBox = new System.Windows.Forms.ComboBox();
@@ -53,21 +54,75 @@
             this.grpBox_switchLED1 = new System.Windows.Forms.GroupBox();
             this.btn_ON_LED1 = new System.Windows.Forms.Button();
             this.btn_OFF_LED1 = new System.Windows.Forms.Button();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpBox_switchLED2 = new System.Windows.Forms.GroupBox();
             this.btn_ON_LED2 = new System.Windows.Forms.Button();
             this.btn_OFF_LED2 = new System.Windows.Forms.Button();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.grpBox_switchLED4 = new System.Windows.Forms.GroupBox();
             this.btn_ON_LED4 = new System.Windows.Forms.Button();
             this.btn_OFF_LED4 = new System.Windows.Forms.Button();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.grpBox_switchLED3 = new System.Windows.Forms.GroupBox();
             this.btn_ON_LED3 = new System.Windows.Forms.Button();
             this.btn_OFF_LED3 = new System.Windows.Forms.Button();
-            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.grpBox_switch_allLED = new System.Windows.Forms.GroupBox();
             this.btn_ON_allLED = new System.Windows.Forms.Button();
             this.btn_OFF_allLED = new System.Windows.Forms.Button();
-            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.grpBox_switchLED5 = new System.Windows.Forms.GroupBox();
             this.btn_ON_LED5 = new System.Windows.Forms.Button();
             this.btn_OFF_LED5 = new System.Windows.Forms.Button();
+            this.grpBox_countdownTimer1 = new System.Windows.Forms.GroupBox();
+            this.lbl_textCountdownSec1 = new System.Windows.Forms.Label();
+            this.txtbox_countdownTime1 = new System.Windows.Forms.TextBox();
+            this.btn_countdownReset1 = new System.Windows.Forms.Button();
+            this.btn_countdownStart1 = new System.Windows.Forms.Button();
+            this.rb_countdownOFF1 = new System.Windows.Forms.RadioButton();
+            this.rb_countdownON1 = new System.Windows.Forms.RadioButton();
+            this.lbl_countdownSeconds1 = new System.Windows.Forms.Label();
+            this.timer_countdown1 = new System.Windows.Forms.Timer(this.components);
+            this.grpBox_countdownTimer2 = new System.Windows.Forms.GroupBox();
+            this.lbl_textCountdownSec2 = new System.Windows.Forms.Label();
+            this.txtbox_countdownTime2 = new System.Windows.Forms.TextBox();
+            this.btn_countdownReset2 = new System.Windows.Forms.Button();
+            this.btn_countdownStart2 = new System.Windows.Forms.Button();
+            this.rb_countdownOFF2 = new System.Windows.Forms.RadioButton();
+            this.rb_countdownON2 = new System.Windows.Forms.RadioButton();
+            this.lbl_countdownSeconds2 = new System.Windows.Forms.Label();
+            this.timer_countdown2 = new System.Windows.Forms.Timer(this.components);
+            this.grpBox_countdownTimer3 = new System.Windows.Forms.GroupBox();
+            this.lbl_textCountdownSec3 = new System.Windows.Forms.Label();
+            this.txtbox_countdownTime3 = new System.Windows.Forms.TextBox();
+            this.btn_countdownReset3 = new System.Windows.Forms.Button();
+            this.btn_countdownStart3 = new System.Windows.Forms.Button();
+            this.rb_countdownOFF3 = new System.Windows.Forms.RadioButton();
+            this.rb_countdownON3 = new System.Windows.Forms.RadioButton();
+            this.lbl_countdownSeconds3 = new System.Windows.Forms.Label();
+            this.timer_countdown3 = new System.Windows.Forms.Timer(this.components);
+            this.timer_countdown4 = new System.Windows.Forms.Timer(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lbl_textCountdownSec_allLED = new System.Windows.Forms.Label();
+            this.txtbox_countdownTime_allLED = new System.Windows.Forms.TextBox();
+            this.btn_countdownReset_allLED = new System.Windows.Forms.Button();
+            this.btn_countdownStart_allLED = new System.Windows.Forms.Button();
+            this.rb_countdownOFF_allLED = new System.Windows.Forms.RadioButton();
+            this.rb_countdownON_allLED = new System.Windows.Forms.RadioButton();
+            this.lbl_countdownSeconds_allLED = new System.Windows.Forms.Label();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lbl_textCountdownSec5 = new System.Windows.Forms.Label();
+            this.txtbox_countdownTime5 = new System.Windows.Forms.TextBox();
+            this.btn_countdownReset5 = new System.Windows.Forms.Button();
+            this.btn_countdownStart5 = new System.Windows.Forms.Button();
+            this.rb_countdownOFF5 = new System.Windows.Forms.RadioButton();
+            this.rb_countdownON5 = new System.Windows.Forms.RadioButton();
+            this.lbl_countdownSeconds5 = new System.Windows.Forms.Label();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lbl_textCountdownSec4 = new System.Windows.Forms.Label();
+            this.txtbox_countdownTime4 = new System.Windows.Forms.TextBox();
+            this.btn_countdownReset4 = new System.Windows.Forms.Button();
+            this.btn_countdownStart4 = new System.Windows.Forms.Button();
+            this.rb_countdownOFF4 = new System.Windows.Forms.RadioButton();
+            this.rb_countdownON4 = new System.Windows.Forms.RadioButton();
+            this.lbl_countdownSeconds4 = new System.Windows.Forms.Label();
+            this.timer_countdown5 = new System.Windows.Forms.Timer(this.components);
+            this.timer_countdown_allLED = new System.Windows.Forms.Timer(this.components);
             this.gpb_portControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_LED1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_ON_LED1)).BeginInit();
@@ -82,11 +137,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_allLED)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_ON_allLED)).BeginInit();
             this.grpBox_switchLED1.SuspendLayout();
+            this.grpBox_switchLED2.SuspendLayout();
+            this.grpBox_switchLED4.SuspendLayout();
+            this.grpBox_switchLED3.SuspendLayout();
+            this.grpBox_switch_allLED.SuspendLayout();
+            this.grpBox_switchLED5.SuspendLayout();
+            this.grpBox_countdownTimer1.SuspendLayout();
+            this.grpBox_countdownTimer2.SuspendLayout();
+            this.grpBox_countdownTimer3.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
-            this.groupBox4.SuspendLayout();
-            this.groupBox5.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_title
@@ -214,7 +275,7 @@
             // pic_OFF_LED5
             // 
             this.pic_OFF_LED5.Image = global::LightsControlSystemFiveLED.Properties.Resources.off;
-            this.pic_OFF_LED5.Location = new System.Drawing.Point(860, 90);
+            this.pic_OFF_LED5.Location = new System.Drawing.Point(855, 90);
             this.pic_OFF_LED5.Name = "pic_OFF_LED5";
             this.pic_OFF_LED5.Size = new System.Drawing.Size(100, 89);
             this.pic_OFF_LED5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -224,7 +285,7 @@
             // pic_ON_LED5
             // 
             this.pic_ON_LED5.Image = global::LightsControlSystemFiveLED.Properties.Resources.on;
-            this.pic_ON_LED5.Location = new System.Drawing.Point(860, 90);
+            this.pic_ON_LED5.Location = new System.Drawing.Point(855, 90);
             this.pic_ON_LED5.Name = "pic_ON_LED5";
             this.pic_ON_LED5.Size = new System.Drawing.Size(100, 89);
             this.pic_ON_LED5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -234,7 +295,7 @@
             // pic_OFF_allLED
             // 
             this.pic_OFF_allLED.Image = global::LightsControlSystemFiveLED.Properties.Resources.off;
-            this.pic_OFF_allLED.Location = new System.Drawing.Point(1056, 90);
+            this.pic_OFF_allLED.Location = new System.Drawing.Point(1049, 90);
             this.pic_OFF_allLED.Name = "pic_OFF_allLED";
             this.pic_OFF_allLED.Size = new System.Drawing.Size(100, 89);
             this.pic_OFF_allLED.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -244,7 +305,7 @@
             // pic_ON_allLED
             // 
             this.pic_ON_allLED.Image = global::LightsControlSystemFiveLED.Properties.Resources.on;
-            this.pic_ON_allLED.Location = new System.Drawing.Point(1056, 90);
+            this.pic_ON_allLED.Location = new System.Drawing.Point(1049, 90);
             this.pic_ON_allLED.Name = "pic_ON_allLED";
             this.pic_ON_allLED.Size = new System.Drawing.Size(100, 89);
             this.pic_ON_allLED.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -256,7 +317,7 @@
             this.lbl_allLED.AutoSize = true;
             this.lbl_allLED.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_allLED.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_allLED.Location = new System.Drawing.Point(1068, 186);
+            this.lbl_allLED.Location = new System.Drawing.Point(1061, 186);
             this.lbl_allLED.Name = "lbl_allLED";
             this.lbl_allLED.Size = new System.Drawing.Size(73, 18);
             this.lbl_allLED.TabIndex = 14;
@@ -311,7 +372,7 @@
             this.lbl_LED5.AutoSize = true;
             this.lbl_LED5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_LED5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_LED5.Location = new System.Drawing.Point(881, 186);
+            this.lbl_LED5.Location = new System.Drawing.Point(876, 186);
             this.lbl_LED5.Name = "lbl_LED5";
             this.lbl_LED5.Size = new System.Drawing.Size(54, 18);
             this.lbl_LED5.TabIndex = 19;
@@ -350,16 +411,16 @@
             this.btn_OFF_LED1.UseVisualStyleBackColor = true;
             this.btn_OFF_LED1.Click += new System.EventHandler(this.btn_OFF_LED1_Click);
             // 
-            // groupBox1
+            // grpBox_switchLED2
             // 
-            this.groupBox1.Controls.Add(this.btn_ON_LED2);
-            this.groupBox1.Controls.Add(this.btn_OFF_LED2);
-            this.groupBox1.Location = new System.Drawing.Point(213, 212);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(172, 59);
-            this.groupBox1.TabIndex = 21;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Switch";
+            this.grpBox_switchLED2.Controls.Add(this.btn_ON_LED2);
+            this.grpBox_switchLED2.Controls.Add(this.btn_OFF_LED2);
+            this.grpBox_switchLED2.Location = new System.Drawing.Point(213, 212);
+            this.grpBox_switchLED2.Name = "grpBox_switchLED2";
+            this.grpBox_switchLED2.Size = new System.Drawing.Size(172, 59);
+            this.grpBox_switchLED2.TabIndex = 21;
+            this.grpBox_switchLED2.TabStop = false;
+            this.grpBox_switchLED2.Text = "Switch";
             // 
             // btn_ON_LED2
             // 
@@ -383,16 +444,16 @@
             this.btn_OFF_LED2.UseVisualStyleBackColor = true;
             this.btn_OFF_LED2.Click += new System.EventHandler(this.btn_OFF_LED2_Click);
             // 
-            // groupBox2
+            // grpBox_switchLED4
             // 
-            this.groupBox2.Controls.Add(this.btn_ON_LED4);
-            this.groupBox2.Controls.Add(this.btn_OFF_LED4);
-            this.groupBox2.Location = new System.Drawing.Point(613, 212);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(172, 59);
-            this.groupBox2.TabIndex = 23;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Switch";
+            this.grpBox_switchLED4.Controls.Add(this.btn_ON_LED4);
+            this.grpBox_switchLED4.Controls.Add(this.btn_OFF_LED4);
+            this.grpBox_switchLED4.Location = new System.Drawing.Point(613, 212);
+            this.grpBox_switchLED4.Name = "grpBox_switchLED4";
+            this.grpBox_switchLED4.Size = new System.Drawing.Size(172, 59);
+            this.grpBox_switchLED4.TabIndex = 23;
+            this.grpBox_switchLED4.TabStop = false;
+            this.grpBox_switchLED4.Text = "Switch";
             // 
             // btn_ON_LED4
             // 
@@ -416,16 +477,16 @@
             this.btn_OFF_LED4.UseVisualStyleBackColor = true;
             this.btn_OFF_LED4.Click += new System.EventHandler(this.btn_OFF_LED4_Click);
             // 
-            // groupBox3
+            // grpBox_switchLED3
             // 
-            this.groupBox3.Controls.Add(this.btn_ON_LED3);
-            this.groupBox3.Controls.Add(this.btn_OFF_LED3);
-            this.groupBox3.Location = new System.Drawing.Point(412, 212);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(172, 59);
-            this.groupBox3.TabIndex = 22;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Switch";
+            this.grpBox_switchLED3.Controls.Add(this.btn_ON_LED3);
+            this.grpBox_switchLED3.Controls.Add(this.btn_OFF_LED3);
+            this.grpBox_switchLED3.Location = new System.Drawing.Point(412, 212);
+            this.grpBox_switchLED3.Name = "grpBox_switchLED3";
+            this.grpBox_switchLED3.Size = new System.Drawing.Size(172, 59);
+            this.grpBox_switchLED3.TabIndex = 22;
+            this.grpBox_switchLED3.TabStop = false;
+            this.grpBox_switchLED3.Text = "Switch";
             // 
             // btn_ON_LED3
             // 
@@ -449,16 +510,16 @@
             this.btn_OFF_LED3.UseVisualStyleBackColor = true;
             this.btn_OFF_LED3.Click += new System.EventHandler(this.btn_OFF_LED3_Click);
             // 
-            // groupBox4
+            // grpBox_switch_allLED
             // 
-            this.groupBox4.Controls.Add(this.btn_ON_allLED);
-            this.groupBox4.Controls.Add(this.btn_OFF_allLED);
-            this.groupBox4.Location = new System.Drawing.Point(1020, 212);
-            this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(172, 59);
-            this.groupBox4.TabIndex = 25;
-            this.groupBox4.TabStop = false;
-            this.groupBox4.Text = "Switch";
+            this.grpBox_switch_allLED.Controls.Add(this.btn_ON_allLED);
+            this.grpBox_switch_allLED.Controls.Add(this.btn_OFF_allLED);
+            this.grpBox_switch_allLED.Location = new System.Drawing.Point(1013, 212);
+            this.grpBox_switch_allLED.Name = "grpBox_switch_allLED";
+            this.grpBox_switch_allLED.Size = new System.Drawing.Size(172, 59);
+            this.grpBox_switch_allLED.TabIndex = 25;
+            this.grpBox_switch_allLED.TabStop = false;
+            this.grpBox_switch_allLED.Text = "Switch";
             // 
             // btn_ON_allLED
             // 
@@ -482,16 +543,16 @@
             this.btn_OFF_allLED.UseVisualStyleBackColor = true;
             this.btn_OFF_allLED.Click += new System.EventHandler(this.btn_OFF_allLED_Click);
             // 
-            // groupBox5
+            // grpBox_switchLED5
             // 
-            this.groupBox5.Controls.Add(this.btn_ON_LED5);
-            this.groupBox5.Controls.Add(this.btn_OFF_LED5);
-            this.groupBox5.Location = new System.Drawing.Point(819, 212);
-            this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(172, 59);
-            this.groupBox5.TabIndex = 24;
-            this.groupBox5.TabStop = false;
-            this.groupBox5.Text = "Switch";
+            this.grpBox_switchLED5.Controls.Add(this.btn_ON_LED5);
+            this.grpBox_switchLED5.Controls.Add(this.btn_OFF_LED5);
+            this.grpBox_switchLED5.Location = new System.Drawing.Point(814, 212);
+            this.grpBox_switchLED5.Name = "grpBox_switchLED5";
+            this.grpBox_switchLED5.Size = new System.Drawing.Size(172, 59);
+            this.grpBox_switchLED5.TabIndex = 24;
+            this.grpBox_switchLED5.TabStop = false;
+            this.grpBox_switchLED5.Text = "Switch";
             // 
             // btn_ON_LED5
             // 
@@ -515,18 +576,612 @@
             this.btn_OFF_LED5.UseVisualStyleBackColor = true;
             this.btn_OFF_LED5.Click += new System.EventHandler(this.btn_OFF_LED5_Click);
             // 
+            // grpBox_countdownTimer1
+            // 
+            this.grpBox_countdownTimer1.Controls.Add(this.lbl_textCountdownSec1);
+            this.grpBox_countdownTimer1.Controls.Add(this.txtbox_countdownTime1);
+            this.grpBox_countdownTimer1.Controls.Add(this.btn_countdownReset1);
+            this.grpBox_countdownTimer1.Controls.Add(this.btn_countdownStart1);
+            this.grpBox_countdownTimer1.Controls.Add(this.rb_countdownOFF1);
+            this.grpBox_countdownTimer1.Controls.Add(this.rb_countdownON1);
+            this.grpBox_countdownTimer1.Controls.Add(this.lbl_countdownSeconds1);
+            this.grpBox_countdownTimer1.Location = new System.Drawing.Point(12, 277);
+            this.grpBox_countdownTimer1.Name = "grpBox_countdownTimer1";
+            this.grpBox_countdownTimer1.Size = new System.Drawing.Size(172, 106);
+            this.grpBox_countdownTimer1.TabIndex = 26;
+            this.grpBox_countdownTimer1.TabStop = false;
+            this.grpBox_countdownTimer1.Text = "Countdown Timer";
+            // 
+            // lbl_textCountdownSec1
+            // 
+            this.lbl_textCountdownSec1.AutoSize = true;
+            this.lbl_textCountdownSec1.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_textCountdownSec1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_textCountdownSec1.Location = new System.Drawing.Point(146, 78);
+            this.lbl_textCountdownSec1.Name = "lbl_textCountdownSec1";
+            this.lbl_textCountdownSec1.Size = new System.Drawing.Size(20, 12);
+            this.lbl_textCountdownSec1.TabIndex = 6;
+            this.lbl_textCountdownSec1.Text = "sec";
+            // 
+            // txtbox_countdownTime1
+            // 
+            this.txtbox_countdownTime1.Location = new System.Drawing.Point(94, 73);
+            this.txtbox_countdownTime1.Name = "txtbox_countdownTime1";
+            this.txtbox_countdownTime1.Size = new System.Drawing.Size(50, 20);
+            this.txtbox_countdownTime1.TabIndex = 5;
+            // 
+            // btn_countdownReset1
+            // 
+            this.btn_countdownReset1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_countdownReset1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_countdownReset1.Location = new System.Drawing.Point(46, 71);
+            this.btn_countdownReset1.Name = "btn_countdownReset1";
+            this.btn_countdownReset1.Size = new System.Drawing.Size(44, 23);
+            this.btn_countdownReset1.TabIndex = 4;
+            this.btn_countdownReset1.Text = "Reset";
+            this.btn_countdownReset1.UseVisualStyleBackColor = true;
+            this.btn_countdownReset1.Click += new System.EventHandler(this.btn_countdownReset1_Click);
+            // 
+            // btn_countdownStart1
+            // 
+            this.btn_countdownStart1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_countdownStart1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_countdownStart1.Location = new System.Drawing.Point(6, 71);
+            this.btn_countdownStart1.Name = "btn_countdownStart1";
+            this.btn_countdownStart1.Size = new System.Drawing.Size(37, 23);
+            this.btn_countdownStart1.TabIndex = 3;
+            this.btn_countdownStart1.Text = "Start";
+            this.btn_countdownStart1.UseVisualStyleBackColor = true;
+            this.btn_countdownStart1.Click += new System.EventHandler(this.btn_countdownStart1_Click);
+            // 
+            // rb_countdownOFF1
+            // 
+            this.rb_countdownOFF1.AutoSize = true;
+            this.rb_countdownOFF1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rb_countdownOFF1.Location = new System.Drawing.Point(108, 47);
+            this.rb_countdownOFF1.Name = "rb_countdownOFF1";
+            this.rb_countdownOFF1.Size = new System.Drawing.Size(45, 17);
+            this.rb_countdownOFF1.TabIndex = 2;
+            this.rb_countdownOFF1.TabStop = true;
+            this.rb_countdownOFF1.Text = "OFF";
+            this.rb_countdownOFF1.UseVisualStyleBackColor = true;
+            // 
+            // rb_countdownON1
+            // 
+            this.rb_countdownON1.AutoSize = true;
+            this.rb_countdownON1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rb_countdownON1.Location = new System.Drawing.Point(108, 21);
+            this.rb_countdownON1.Name = "rb_countdownON1";
+            this.rb_countdownON1.Size = new System.Drawing.Size(41, 17);
+            this.rb_countdownON1.TabIndex = 1;
+            this.rb_countdownON1.TabStop = true;
+            this.rb_countdownON1.Text = "ON";
+            this.rb_countdownON1.UseVisualStyleBackColor = true;
+            // 
+            // lbl_countdownSeconds1
+            // 
+            this.lbl_countdownSeconds1.AutoSize = true;
+            this.lbl_countdownSeconds1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_countdownSeconds1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_countdownSeconds1.Location = new System.Drawing.Point(16, 19);
+            this.lbl_countdownSeconds1.Name = "lbl_countdownSeconds1";
+            this.lbl_countdownSeconds1.Size = new System.Drawing.Size(42, 46);
+            this.lbl_countdownSeconds1.TabIndex = 0;
+            this.lbl_countdownSeconds1.Text = "0";
+            // 
+            // timer_countdown1
+            // 
+            this.timer_countdown1.Interval = 1000;
+            this.timer_countdown1.Tick += new System.EventHandler(this.timer_countdown1_Tick);
+            // 
+            // grpBox_countdownTimer2
+            // 
+            this.grpBox_countdownTimer2.Controls.Add(this.lbl_textCountdownSec2);
+            this.grpBox_countdownTimer2.Controls.Add(this.txtbox_countdownTime2);
+            this.grpBox_countdownTimer2.Controls.Add(this.btn_countdownReset2);
+            this.grpBox_countdownTimer2.Controls.Add(this.btn_countdownStart2);
+            this.grpBox_countdownTimer2.Controls.Add(this.rb_countdownOFF2);
+            this.grpBox_countdownTimer2.Controls.Add(this.rb_countdownON2);
+            this.grpBox_countdownTimer2.Controls.Add(this.lbl_countdownSeconds2);
+            this.grpBox_countdownTimer2.Location = new System.Drawing.Point(213, 277);
+            this.grpBox_countdownTimer2.Name = "grpBox_countdownTimer2";
+            this.grpBox_countdownTimer2.Size = new System.Drawing.Size(172, 106);
+            this.grpBox_countdownTimer2.TabIndex = 27;
+            this.grpBox_countdownTimer2.TabStop = false;
+            this.grpBox_countdownTimer2.Text = "Countdown Timer";
+            // 
+            // lbl_textCountdownSec2
+            // 
+            this.lbl_textCountdownSec2.AutoSize = true;
+            this.lbl_textCountdownSec2.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_textCountdownSec2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_textCountdownSec2.Location = new System.Drawing.Point(146, 78);
+            this.lbl_textCountdownSec2.Name = "lbl_textCountdownSec2";
+            this.lbl_textCountdownSec2.Size = new System.Drawing.Size(20, 12);
+            this.lbl_textCountdownSec2.TabIndex = 6;
+            this.lbl_textCountdownSec2.Text = "sec";
+            // 
+            // txtbox_countdownTime2
+            // 
+            this.txtbox_countdownTime2.Location = new System.Drawing.Point(94, 73);
+            this.txtbox_countdownTime2.Name = "txtbox_countdownTime2";
+            this.txtbox_countdownTime2.Size = new System.Drawing.Size(50, 20);
+            this.txtbox_countdownTime2.TabIndex = 5;
+            // 
+            // btn_countdownReset2
+            // 
+            this.btn_countdownReset2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_countdownReset2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_countdownReset2.Location = new System.Drawing.Point(46, 71);
+            this.btn_countdownReset2.Name = "btn_countdownReset2";
+            this.btn_countdownReset2.Size = new System.Drawing.Size(44, 23);
+            this.btn_countdownReset2.TabIndex = 4;
+            this.btn_countdownReset2.Text = "Reset";
+            this.btn_countdownReset2.UseVisualStyleBackColor = true;
+            this.btn_countdownReset2.Click += new System.EventHandler(this.btn_countdownReset2_Click);
+            // 
+            // btn_countdownStart2
+            // 
+            this.btn_countdownStart2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_countdownStart2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_countdownStart2.Location = new System.Drawing.Point(6, 71);
+            this.btn_countdownStart2.Name = "btn_countdownStart2";
+            this.btn_countdownStart2.Size = new System.Drawing.Size(37, 23);
+            this.btn_countdownStart2.TabIndex = 3;
+            this.btn_countdownStart2.Text = "Start";
+            this.btn_countdownStart2.UseVisualStyleBackColor = true;
+            this.btn_countdownStart2.Click += new System.EventHandler(this.btn_countdownStart2_Click);
+            // 
+            // rb_countdownOFF2
+            // 
+            this.rb_countdownOFF2.AutoSize = true;
+            this.rb_countdownOFF2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rb_countdownOFF2.Location = new System.Drawing.Point(108, 47);
+            this.rb_countdownOFF2.Name = "rb_countdownOFF2";
+            this.rb_countdownOFF2.Size = new System.Drawing.Size(45, 17);
+            this.rb_countdownOFF2.TabIndex = 2;
+            this.rb_countdownOFF2.TabStop = true;
+            this.rb_countdownOFF2.Text = "OFF";
+            this.rb_countdownOFF2.UseVisualStyleBackColor = true;
+            // 
+            // rb_countdownON2
+            // 
+            this.rb_countdownON2.AutoSize = true;
+            this.rb_countdownON2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rb_countdownON2.Location = new System.Drawing.Point(108, 21);
+            this.rb_countdownON2.Name = "rb_countdownON2";
+            this.rb_countdownON2.Size = new System.Drawing.Size(41, 17);
+            this.rb_countdownON2.TabIndex = 1;
+            this.rb_countdownON2.TabStop = true;
+            this.rb_countdownON2.Text = "ON";
+            this.rb_countdownON2.UseVisualStyleBackColor = true;
+            // 
+            // lbl_countdownSeconds2
+            // 
+            this.lbl_countdownSeconds2.AutoSize = true;
+            this.lbl_countdownSeconds2.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_countdownSeconds2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_countdownSeconds2.Location = new System.Drawing.Point(16, 19);
+            this.lbl_countdownSeconds2.Name = "lbl_countdownSeconds2";
+            this.lbl_countdownSeconds2.Size = new System.Drawing.Size(42, 46);
+            this.lbl_countdownSeconds2.TabIndex = 0;
+            this.lbl_countdownSeconds2.Text = "0";
+            // 
+            // timer_countdown2
+            // 
+            this.timer_countdown2.Interval = 1000;
+            this.timer_countdown2.Tick += new System.EventHandler(this.timer_countdown2_Tick);
+            // 
+            // grpBox_countdownTimer3
+            // 
+            this.grpBox_countdownTimer3.Controls.Add(this.lbl_textCountdownSec3);
+            this.grpBox_countdownTimer3.Controls.Add(this.txtbox_countdownTime3);
+            this.grpBox_countdownTimer3.Controls.Add(this.btn_countdownReset3);
+            this.grpBox_countdownTimer3.Controls.Add(this.btn_countdownStart3);
+            this.grpBox_countdownTimer3.Controls.Add(this.rb_countdownOFF3);
+            this.grpBox_countdownTimer3.Controls.Add(this.rb_countdownON3);
+            this.grpBox_countdownTimer3.Controls.Add(this.lbl_countdownSeconds3);
+            this.grpBox_countdownTimer3.Location = new System.Drawing.Point(412, 277);
+            this.grpBox_countdownTimer3.Name = "grpBox_countdownTimer3";
+            this.grpBox_countdownTimer3.Size = new System.Drawing.Size(172, 106);
+            this.grpBox_countdownTimer3.TabIndex = 27;
+            this.grpBox_countdownTimer3.TabStop = false;
+            this.grpBox_countdownTimer3.Text = "Countdown Timer";
+            // 
+            // lbl_textCountdownSec3
+            // 
+            this.lbl_textCountdownSec3.AutoSize = true;
+            this.lbl_textCountdownSec3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_textCountdownSec3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_textCountdownSec3.Location = new System.Drawing.Point(146, 78);
+            this.lbl_textCountdownSec3.Name = "lbl_textCountdownSec3";
+            this.lbl_textCountdownSec3.Size = new System.Drawing.Size(20, 12);
+            this.lbl_textCountdownSec3.TabIndex = 6;
+            this.lbl_textCountdownSec3.Text = "sec";
+            // 
+            // txtbox_countdownTime3
+            // 
+            this.txtbox_countdownTime3.Location = new System.Drawing.Point(94, 73);
+            this.txtbox_countdownTime3.Name = "txtbox_countdownTime3";
+            this.txtbox_countdownTime3.Size = new System.Drawing.Size(50, 20);
+            this.txtbox_countdownTime3.TabIndex = 5;
+            // 
+            // btn_countdownReset3
+            // 
+            this.btn_countdownReset3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_countdownReset3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_countdownReset3.Location = new System.Drawing.Point(46, 71);
+            this.btn_countdownReset3.Name = "btn_countdownReset3";
+            this.btn_countdownReset3.Size = new System.Drawing.Size(44, 23);
+            this.btn_countdownReset3.TabIndex = 4;
+            this.btn_countdownReset3.Text = "Reset";
+            this.btn_countdownReset3.UseVisualStyleBackColor = true;
+            this.btn_countdownReset3.Click += new System.EventHandler(this.btn_countdownReset3_Click);
+            // 
+            // btn_countdownStart3
+            // 
+            this.btn_countdownStart3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_countdownStart3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_countdownStart3.Location = new System.Drawing.Point(6, 71);
+            this.btn_countdownStart3.Name = "btn_countdownStart3";
+            this.btn_countdownStart3.Size = new System.Drawing.Size(37, 23);
+            this.btn_countdownStart3.TabIndex = 3;
+            this.btn_countdownStart3.Text = "Start";
+            this.btn_countdownStart3.UseVisualStyleBackColor = true;
+            this.btn_countdownStart3.Click += new System.EventHandler(this.btn_countdownStart3_Click);
+            // 
+            // rb_countdownOFF3
+            // 
+            this.rb_countdownOFF3.AutoSize = true;
+            this.rb_countdownOFF3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rb_countdownOFF3.Location = new System.Drawing.Point(108, 47);
+            this.rb_countdownOFF3.Name = "rb_countdownOFF3";
+            this.rb_countdownOFF3.Size = new System.Drawing.Size(45, 17);
+            this.rb_countdownOFF3.TabIndex = 2;
+            this.rb_countdownOFF3.TabStop = true;
+            this.rb_countdownOFF3.Text = "OFF";
+            this.rb_countdownOFF3.UseVisualStyleBackColor = true;
+            // 
+            // rb_countdownON3
+            // 
+            this.rb_countdownON3.AutoSize = true;
+            this.rb_countdownON3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rb_countdownON3.Location = new System.Drawing.Point(108, 21);
+            this.rb_countdownON3.Name = "rb_countdownON3";
+            this.rb_countdownON3.Size = new System.Drawing.Size(41, 17);
+            this.rb_countdownON3.TabIndex = 1;
+            this.rb_countdownON3.TabStop = true;
+            this.rb_countdownON3.Text = "ON";
+            this.rb_countdownON3.UseVisualStyleBackColor = true;
+            // 
+            // lbl_countdownSeconds3
+            // 
+            this.lbl_countdownSeconds3.AutoSize = true;
+            this.lbl_countdownSeconds3.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_countdownSeconds3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_countdownSeconds3.Location = new System.Drawing.Point(16, 19);
+            this.lbl_countdownSeconds3.Name = "lbl_countdownSeconds3";
+            this.lbl_countdownSeconds3.Size = new System.Drawing.Size(42, 46);
+            this.lbl_countdownSeconds3.TabIndex = 0;
+            this.lbl_countdownSeconds3.Text = "0";
+            // 
+            // timer_countdown3
+            // 
+            this.timer_countdown3.Interval = 1000;
+            this.timer_countdown3.Tick += new System.EventHandler(this.timer_countdown3_Tick);
+            // 
+            // timer_countdown4
+            // 
+            this.timer_countdown4.Interval = 1000;
+            this.timer_countdown4.Tick += new System.EventHandler(this.timer_countdown4_Tick);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.lbl_textCountdownSec_allLED);
+            this.groupBox1.Controls.Add(this.txtbox_countdownTime_allLED);
+            this.groupBox1.Controls.Add(this.btn_countdownReset_allLED);
+            this.groupBox1.Controls.Add(this.btn_countdownStart_allLED);
+            this.groupBox1.Controls.Add(this.rb_countdownOFF_allLED);
+            this.groupBox1.Controls.Add(this.rb_countdownON_allLED);
+            this.groupBox1.Controls.Add(this.lbl_countdownSeconds_allLED);
+            this.groupBox1.Location = new System.Drawing.Point(1013, 277);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(172, 106);
+            this.groupBox1.TabIndex = 30;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Countdown Timer";
+            // 
+            // lbl_textCountdownSec_allLED
+            // 
+            this.lbl_textCountdownSec_allLED.AutoSize = true;
+            this.lbl_textCountdownSec_allLED.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_textCountdownSec_allLED.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_textCountdownSec_allLED.Location = new System.Drawing.Point(146, 78);
+            this.lbl_textCountdownSec_allLED.Name = "lbl_textCountdownSec_allLED";
+            this.lbl_textCountdownSec_allLED.Size = new System.Drawing.Size(20, 12);
+            this.lbl_textCountdownSec_allLED.TabIndex = 6;
+            this.lbl_textCountdownSec_allLED.Text = "sec";
+            // 
+            // txtbox_countdownTime_allLED
+            // 
+            this.txtbox_countdownTime_allLED.Location = new System.Drawing.Point(94, 73);
+            this.txtbox_countdownTime_allLED.Name = "txtbox_countdownTime_allLED";
+            this.txtbox_countdownTime_allLED.Size = new System.Drawing.Size(50, 20);
+            this.txtbox_countdownTime_allLED.TabIndex = 5;
+            // 
+            // btn_countdownReset_allLED
+            // 
+            this.btn_countdownReset_allLED.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_countdownReset_allLED.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_countdownReset_allLED.Location = new System.Drawing.Point(46, 71);
+            this.btn_countdownReset_allLED.Name = "btn_countdownReset_allLED";
+            this.btn_countdownReset_allLED.Size = new System.Drawing.Size(44, 23);
+            this.btn_countdownReset_allLED.TabIndex = 4;
+            this.btn_countdownReset_allLED.Text = "Reset";
+            this.btn_countdownReset_allLED.UseVisualStyleBackColor = true;
+            this.btn_countdownReset_allLED.Click += new System.EventHandler(this.btn_countdownReset_allLED_Click);
+            // 
+            // btn_countdownStart_allLED
+            // 
+            this.btn_countdownStart_allLED.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_countdownStart_allLED.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_countdownStart_allLED.Location = new System.Drawing.Point(6, 71);
+            this.btn_countdownStart_allLED.Name = "btn_countdownStart_allLED";
+            this.btn_countdownStart_allLED.Size = new System.Drawing.Size(37, 23);
+            this.btn_countdownStart_allLED.TabIndex = 3;
+            this.btn_countdownStart_allLED.Text = "Start";
+            this.btn_countdownStart_allLED.UseVisualStyleBackColor = true;
+            this.btn_countdownStart_allLED.Click += new System.EventHandler(this.btn_countdownStart_allLED_Click);
+            // 
+            // rb_countdownOFF_allLED
+            // 
+            this.rb_countdownOFF_allLED.AutoSize = true;
+            this.rb_countdownOFF_allLED.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rb_countdownOFF_allLED.Location = new System.Drawing.Point(108, 47);
+            this.rb_countdownOFF_allLED.Name = "rb_countdownOFF_allLED";
+            this.rb_countdownOFF_allLED.Size = new System.Drawing.Size(45, 17);
+            this.rb_countdownOFF_allLED.TabIndex = 2;
+            this.rb_countdownOFF_allLED.TabStop = true;
+            this.rb_countdownOFF_allLED.Text = "OFF";
+            this.rb_countdownOFF_allLED.UseVisualStyleBackColor = true;
+            // 
+            // rb_countdownON_allLED
+            // 
+            this.rb_countdownON_allLED.AutoSize = true;
+            this.rb_countdownON_allLED.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rb_countdownON_allLED.Location = new System.Drawing.Point(108, 21);
+            this.rb_countdownON_allLED.Name = "rb_countdownON_allLED";
+            this.rb_countdownON_allLED.Size = new System.Drawing.Size(41, 17);
+            this.rb_countdownON_allLED.TabIndex = 1;
+            this.rb_countdownON_allLED.TabStop = true;
+            this.rb_countdownON_allLED.Text = "ON";
+            this.rb_countdownON_allLED.UseVisualStyleBackColor = true;
+            // 
+            // lbl_countdownSeconds_allLED
+            // 
+            this.lbl_countdownSeconds_allLED.AutoSize = true;
+            this.lbl_countdownSeconds_allLED.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_countdownSeconds_allLED.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_countdownSeconds_allLED.Location = new System.Drawing.Point(16, 19);
+            this.lbl_countdownSeconds_allLED.Name = "lbl_countdownSeconds_allLED";
+            this.lbl_countdownSeconds_allLED.Size = new System.Drawing.Size(42, 46);
+            this.lbl_countdownSeconds_allLED.TabIndex = 0;
+            this.lbl_countdownSeconds_allLED.Text = "0";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.lbl_textCountdownSec5);
+            this.groupBox2.Controls.Add(this.txtbox_countdownTime5);
+            this.groupBox2.Controls.Add(this.btn_countdownReset5);
+            this.groupBox2.Controls.Add(this.btn_countdownStart5);
+            this.groupBox2.Controls.Add(this.rb_countdownOFF5);
+            this.groupBox2.Controls.Add(this.rb_countdownON5);
+            this.groupBox2.Controls.Add(this.lbl_countdownSeconds5);
+            this.groupBox2.Location = new System.Drawing.Point(814, 277);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(172, 106);
+            this.groupBox2.TabIndex = 29;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Countdown Timer";
+            // 
+            // lbl_textCountdownSec5
+            // 
+            this.lbl_textCountdownSec5.AutoSize = true;
+            this.lbl_textCountdownSec5.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_textCountdownSec5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_textCountdownSec5.Location = new System.Drawing.Point(146, 78);
+            this.lbl_textCountdownSec5.Name = "lbl_textCountdownSec5";
+            this.lbl_textCountdownSec5.Size = new System.Drawing.Size(20, 12);
+            this.lbl_textCountdownSec5.TabIndex = 6;
+            this.lbl_textCountdownSec5.Text = "sec";
+            // 
+            // txtbox_countdownTime5
+            // 
+            this.txtbox_countdownTime5.Location = new System.Drawing.Point(94, 73);
+            this.txtbox_countdownTime5.Name = "txtbox_countdownTime5";
+            this.txtbox_countdownTime5.Size = new System.Drawing.Size(50, 20);
+            this.txtbox_countdownTime5.TabIndex = 5;
+            // 
+            // btn_countdownReset5
+            // 
+            this.btn_countdownReset5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_countdownReset5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_countdownReset5.Location = new System.Drawing.Point(46, 71);
+            this.btn_countdownReset5.Name = "btn_countdownReset5";
+            this.btn_countdownReset5.Size = new System.Drawing.Size(44, 23);
+            this.btn_countdownReset5.TabIndex = 4;
+            this.btn_countdownReset5.Text = "Reset";
+            this.btn_countdownReset5.UseVisualStyleBackColor = true;
+            this.btn_countdownReset5.Click += new System.EventHandler(this.btn_countdownReset5_Click);
+            // 
+            // btn_countdownStart5
+            // 
+            this.btn_countdownStart5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_countdownStart5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_countdownStart5.Location = new System.Drawing.Point(6, 71);
+            this.btn_countdownStart5.Name = "btn_countdownStart5";
+            this.btn_countdownStart5.Size = new System.Drawing.Size(37, 23);
+            this.btn_countdownStart5.TabIndex = 3;
+            this.btn_countdownStart5.Text = "Start";
+            this.btn_countdownStart5.UseVisualStyleBackColor = true;
+            this.btn_countdownStart5.Click += new System.EventHandler(this.btn_countdownStart5_Click);
+            // 
+            // rb_countdownOFF5
+            // 
+            this.rb_countdownOFF5.AutoSize = true;
+            this.rb_countdownOFF5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rb_countdownOFF5.Location = new System.Drawing.Point(108, 47);
+            this.rb_countdownOFF5.Name = "rb_countdownOFF5";
+            this.rb_countdownOFF5.Size = new System.Drawing.Size(45, 17);
+            this.rb_countdownOFF5.TabIndex = 2;
+            this.rb_countdownOFF5.TabStop = true;
+            this.rb_countdownOFF5.Text = "OFF";
+            this.rb_countdownOFF5.UseVisualStyleBackColor = true;
+            // 
+            // rb_countdownON5
+            // 
+            this.rb_countdownON5.AutoSize = true;
+            this.rb_countdownON5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rb_countdownON5.Location = new System.Drawing.Point(108, 21);
+            this.rb_countdownON5.Name = "rb_countdownON5";
+            this.rb_countdownON5.Size = new System.Drawing.Size(41, 17);
+            this.rb_countdownON5.TabIndex = 1;
+            this.rb_countdownON5.TabStop = true;
+            this.rb_countdownON5.Text = "ON";
+            this.rb_countdownON5.UseVisualStyleBackColor = true;
+            // 
+            // lbl_countdownSeconds5
+            // 
+            this.lbl_countdownSeconds5.AutoSize = true;
+            this.lbl_countdownSeconds5.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_countdownSeconds5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_countdownSeconds5.Location = new System.Drawing.Point(16, 19);
+            this.lbl_countdownSeconds5.Name = "lbl_countdownSeconds5";
+            this.lbl_countdownSeconds5.Size = new System.Drawing.Size(42, 46);
+            this.lbl_countdownSeconds5.TabIndex = 0;
+            this.lbl_countdownSeconds5.Text = "0";
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.lbl_textCountdownSec4);
+            this.groupBox3.Controls.Add(this.txtbox_countdownTime4);
+            this.groupBox3.Controls.Add(this.btn_countdownReset4);
+            this.groupBox3.Controls.Add(this.btn_countdownStart4);
+            this.groupBox3.Controls.Add(this.rb_countdownOFF4);
+            this.groupBox3.Controls.Add(this.rb_countdownON4);
+            this.groupBox3.Controls.Add(this.lbl_countdownSeconds4);
+            this.groupBox3.Location = new System.Drawing.Point(613, 277);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(172, 106);
+            this.groupBox3.TabIndex = 28;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "Countdown Timer";
+            // 
+            // lbl_textCountdownSec4
+            // 
+            this.lbl_textCountdownSec4.AutoSize = true;
+            this.lbl_textCountdownSec4.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_textCountdownSec4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_textCountdownSec4.Location = new System.Drawing.Point(146, 78);
+            this.lbl_textCountdownSec4.Name = "lbl_textCountdownSec4";
+            this.lbl_textCountdownSec4.Size = new System.Drawing.Size(20, 12);
+            this.lbl_textCountdownSec4.TabIndex = 6;
+            this.lbl_textCountdownSec4.Text = "sec";
+            // 
+            // txtbox_countdownTime4
+            // 
+            this.txtbox_countdownTime4.Location = new System.Drawing.Point(94, 73);
+            this.txtbox_countdownTime4.Name = "txtbox_countdownTime4";
+            this.txtbox_countdownTime4.Size = new System.Drawing.Size(50, 20);
+            this.txtbox_countdownTime4.TabIndex = 5;
+            // 
+            // btn_countdownReset4
+            // 
+            this.btn_countdownReset4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_countdownReset4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_countdownReset4.Location = new System.Drawing.Point(46, 71);
+            this.btn_countdownReset4.Name = "btn_countdownReset4";
+            this.btn_countdownReset4.Size = new System.Drawing.Size(44, 23);
+            this.btn_countdownReset4.TabIndex = 4;
+            this.btn_countdownReset4.Text = "Reset";
+            this.btn_countdownReset4.UseVisualStyleBackColor = true;
+            this.btn_countdownReset4.Click += new System.EventHandler(this.btn_countdownReset4_Click);
+            // 
+            // btn_countdownStart4
+            // 
+            this.btn_countdownStart4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_countdownStart4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_countdownStart4.Location = new System.Drawing.Point(6, 71);
+            this.btn_countdownStart4.Name = "btn_countdownStart4";
+            this.btn_countdownStart4.Size = new System.Drawing.Size(37, 23);
+            this.btn_countdownStart4.TabIndex = 3;
+            this.btn_countdownStart4.Text = "Start";
+            this.btn_countdownStart4.UseVisualStyleBackColor = true;
+            this.btn_countdownStart4.Click += new System.EventHandler(this.btn_countdownStart4_Click);
+            // 
+            // rb_countdownOFF4
+            // 
+            this.rb_countdownOFF4.AutoSize = true;
+            this.rb_countdownOFF4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rb_countdownOFF4.Location = new System.Drawing.Point(108, 47);
+            this.rb_countdownOFF4.Name = "rb_countdownOFF4";
+            this.rb_countdownOFF4.Size = new System.Drawing.Size(45, 17);
+            this.rb_countdownOFF4.TabIndex = 2;
+            this.rb_countdownOFF4.TabStop = true;
+            this.rb_countdownOFF4.Text = "OFF";
+            this.rb_countdownOFF4.UseVisualStyleBackColor = true;
+            // 
+            // rb_countdownON4
+            // 
+            this.rb_countdownON4.AutoSize = true;
+            this.rb_countdownON4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rb_countdownON4.Location = new System.Drawing.Point(108, 21);
+            this.rb_countdownON4.Name = "rb_countdownON4";
+            this.rb_countdownON4.Size = new System.Drawing.Size(41, 17);
+            this.rb_countdownON4.TabIndex = 1;
+            this.rb_countdownON4.TabStop = true;
+            this.rb_countdownON4.Text = "ON";
+            this.rb_countdownON4.UseVisualStyleBackColor = true;
+            // 
+            // lbl_countdownSeconds4
+            // 
+            this.lbl_countdownSeconds4.AutoSize = true;
+            this.lbl_countdownSeconds4.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_countdownSeconds4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_countdownSeconds4.Location = new System.Drawing.Point(16, 19);
+            this.lbl_countdownSeconds4.Name = "lbl_countdownSeconds4";
+            this.lbl_countdownSeconds4.Size = new System.Drawing.Size(42, 46);
+            this.lbl_countdownSeconds4.TabIndex = 0;
+            this.lbl_countdownSeconds4.Text = "0";
+            // 
+            // timer_countdown5
+            // 
+            this.timer_countdown5.Interval = 1000;
+            this.timer_countdown5.Tick += new System.EventHandler(this.timer_countdown5_Tick);
+            // 
+            // timer_countdown_allLED
+            // 
+            this.timer_countdown_allLED.Interval = 1000;
+            this.timer_countdown_allLED.Tick += new System.EventHandler(this.timer_countdown_allLED_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1202, 564);
-            this.Controls.Add(this.lbl_title);
-            this.Controls.Add(this.groupBox4);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox5);
-            this.Controls.Add(this.groupBox3);
-            this.Controls.Add(this.lbl_LED1);
             this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpBox_countdownTimer3);
+            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.grpBox_countdownTimer2);
+            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.grpBox_countdownTimer1);
+            this.Controls.Add(this.lbl_title);
+            this.Controls.Add(this.grpBox_switch_allLED);
+            this.Controls.Add(this.grpBox_switchLED4);
+            this.Controls.Add(this.grpBox_switchLED5);
+            this.Controls.Add(this.grpBox_switchLED3);
+            this.Controls.Add(this.lbl_LED1);
+            this.Controls.Add(this.grpBox_switchLED2);
             this.Controls.Add(this.grpBox_switchLED1);
             this.Controls.Add(this.lbl_LED5);
             this.Controls.Add(this.lbl_LED4);
@@ -565,11 +1220,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_allLED)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_ON_allLED)).EndInit();
             this.grpBox_switchLED1.ResumeLayout(false);
+            this.grpBox_switchLED2.ResumeLayout(false);
+            this.grpBox_switchLED4.ResumeLayout(false);
+            this.grpBox_switchLED3.ResumeLayout(false);
+            this.grpBox_switch_allLED.ResumeLayout(false);
+            this.grpBox_switchLED5.ResumeLayout(false);
+            this.grpBox_countdownTimer1.ResumeLayout(false);
+            this.grpBox_countdownTimer1.PerformLayout();
+            this.grpBox_countdownTimer2.ResumeLayout(false);
+            this.grpBox_countdownTimer2.PerformLayout();
+            this.grpBox_countdownTimer3.ResumeLayout(false);
+            this.grpBox_countdownTimer3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox3.ResumeLayout(false);
-            this.groupBox4.ResumeLayout(false);
-            this.groupBox5.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -602,21 +1269,75 @@
         private System.Windows.Forms.GroupBox grpBox_switchLED1;
         private System.Windows.Forms.Button btn_ON_LED1;
         private System.Windows.Forms.Button btn_OFF_LED1;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpBox_switchLED2;
         private System.Windows.Forms.Button btn_ON_LED2;
         private System.Windows.Forms.Button btn_OFF_LED2;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox grpBox_switchLED4;
         private System.Windows.Forms.Button btn_ON_LED4;
         private System.Windows.Forms.Button btn_OFF_LED4;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox grpBox_switchLED3;
         private System.Windows.Forms.Button btn_ON_LED3;
         private System.Windows.Forms.Button btn_OFF_LED3;
-        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.GroupBox grpBox_switch_allLED;
         private System.Windows.Forms.Button btn_ON_allLED;
         private System.Windows.Forms.Button btn_OFF_allLED;
-        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.GroupBox grpBox_switchLED5;
         private System.Windows.Forms.Button btn_ON_LED5;
         private System.Windows.Forms.Button btn_OFF_LED5;
+        private System.Windows.Forms.GroupBox grpBox_countdownTimer1;
+        private System.Windows.Forms.Label lbl_countdownSeconds1;
+        private System.Windows.Forms.RadioButton rb_countdownON1;
+        private System.Windows.Forms.Label lbl_textCountdownSec1;
+        private System.Windows.Forms.TextBox txtbox_countdownTime1;
+        private System.Windows.Forms.Button btn_countdownReset1;
+        private System.Windows.Forms.Button btn_countdownStart1;
+        private System.Windows.Forms.RadioButton rb_countdownOFF1;
+        private System.Windows.Forms.Timer timer_countdown1;
+        private System.Windows.Forms.GroupBox grpBox_countdownTimer2;
+        private System.Windows.Forms.Label lbl_textCountdownSec2;
+        private System.Windows.Forms.TextBox txtbox_countdownTime2;
+        private System.Windows.Forms.Button btn_countdownReset2;
+        private System.Windows.Forms.Button btn_countdownStart2;
+        private System.Windows.Forms.RadioButton rb_countdownOFF2;
+        private System.Windows.Forms.RadioButton rb_countdownON2;
+        private System.Windows.Forms.Label lbl_countdownSeconds2;
+        private System.Windows.Forms.Timer timer_countdown2;
+        private System.Windows.Forms.GroupBox grpBox_countdownTimer3;
+        private System.Windows.Forms.Label lbl_textCountdownSec3;
+        private System.Windows.Forms.TextBox txtbox_countdownTime3;
+        private System.Windows.Forms.Button btn_countdownReset3;
+        private System.Windows.Forms.Button btn_countdownStart3;
+        private System.Windows.Forms.RadioButton rb_countdownOFF3;
+        private System.Windows.Forms.RadioButton rb_countdownON3;
+        private System.Windows.Forms.Label lbl_countdownSeconds3;
+        private System.Windows.Forms.Timer timer_countdown3;
+        private System.Windows.Forms.Timer timer_countdown4;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label lbl_textCountdownSec_allLED;
+        private System.Windows.Forms.TextBox txtbox_countdownTime_allLED;
+        private System.Windows.Forms.Button btn_countdownReset_allLED;
+        private System.Windows.Forms.Button btn_countdownStart_allLED;
+        private System.Windows.Forms.RadioButton rb_countdownOFF_allLED;
+        private System.Windows.Forms.RadioButton rb_countdownON_allLED;
+        private System.Windows.Forms.Label lbl_countdownSeconds_allLED;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label lbl_textCountdownSec5;
+        private System.Windows.Forms.TextBox txtbox_countdownTime5;
+        private System.Windows.Forms.Button btn_countdownReset5;
+        private System.Windows.Forms.Button btn_countdownStart5;
+        private System.Windows.Forms.RadioButton rb_countdownOFF5;
+        private System.Windows.Forms.RadioButton rb_countdownON5;
+        private System.Windows.Forms.Label lbl_countdownSeconds5;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label lbl_textCountdownSec4;
+        private System.Windows.Forms.TextBox txtbox_countdownTime4;
+        private System.Windows.Forms.Button btn_countdownReset4;
+        private System.Windows.Forms.Button btn_countdownStart4;
+        private System.Windows.Forms.RadioButton rb_countdownOFF4;
+        private System.Windows.Forms.RadioButton rb_countdownON4;
+        private System.Windows.Forms.Label lbl_countdownSeconds4;
+        private System.Windows.Forms.Timer timer_countdown5;
+        private System.Windows.Forms.Timer timer_countdown_allLED;
     }
 }
 
