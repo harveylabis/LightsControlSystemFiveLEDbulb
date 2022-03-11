@@ -97,7 +97,7 @@
             this.lbl_countdownSeconds3 = new System.Windows.Forms.Label();
             this.timer_countdown3 = new System.Windows.Forms.Timer(this.components);
             this.timer_countdown4 = new System.Windows.Forms.Timer(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.grpBox_countdownTimer_allLED = new System.Windows.Forms.GroupBox();
             this.lbl_textCountdownSec_allLED = new System.Windows.Forms.Label();
             this.txtbox_countdownTime_allLED = new System.Windows.Forms.TextBox();
             this.btn_countdownReset_allLED = new System.Windows.Forms.Button();
@@ -105,7 +105,7 @@
             this.rb_countdownOFF_allLED = new System.Windows.Forms.RadioButton();
             this.rb_countdownON_allLED = new System.Windows.Forms.RadioButton();
             this.lbl_countdownSeconds_allLED = new System.Windows.Forms.Label();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.grpBox_countdownTimer5 = new System.Windows.Forms.GroupBox();
             this.lbl_textCountdownSec5 = new System.Windows.Forms.Label();
             this.txtbox_countdownTime5 = new System.Windows.Forms.TextBox();
             this.btn_countdownReset5 = new System.Windows.Forms.Button();
@@ -113,7 +113,7 @@
             this.rb_countdownOFF5 = new System.Windows.Forms.RadioButton();
             this.rb_countdownON5 = new System.Windows.Forms.RadioButton();
             this.lbl_countdownSeconds5 = new System.Windows.Forms.Label();
-            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.grpBox_countdownTimer4 = new System.Windows.Forms.GroupBox();
             this.lbl_textCountdownSec4 = new System.Windows.Forms.Label();
             this.txtbox_countdownTime4 = new System.Windows.Forms.TextBox();
             this.btn_countdownReset4 = new System.Windows.Forms.Button();
@@ -217,9 +217,9 @@
             this.grpBox_countdownTimer1.SuspendLayout();
             this.grpBox_countdownTimer2.SuspendLayout();
             this.grpBox_countdownTimer3.SuspendLayout();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
-            this.groupBox3.SuspendLayout();
+            this.grpBox_countdownTimer_allLED.SuspendLayout();
+            this.grpBox_countdownTimer5.SuspendLayout();
+            this.grpBox_countdownTimer4.SuspendLayout();
             this.grpBox_dateTimeControl1.SuspendLayout();
             this.grpBox_dateTimeStop1.SuspendLayout();
             this.grpBox_dateTimeStart1.SuspendLayout();
@@ -965,21 +965,21 @@
             this.timer_countdown4.Interval = 1000;
             this.timer_countdown4.Tick += new System.EventHandler(this.timer_countdown4_Tick);
             // 
-            // groupBox1
+            // grpBox_countdownTimer_allLED
             // 
-            this.groupBox1.Controls.Add(this.lbl_textCountdownSec_allLED);
-            this.groupBox1.Controls.Add(this.txtbox_countdownTime_allLED);
-            this.groupBox1.Controls.Add(this.btn_countdownReset_allLED);
-            this.groupBox1.Controls.Add(this.btn_countdownStart_allLED);
-            this.groupBox1.Controls.Add(this.rb_countdownOFF_allLED);
-            this.groupBox1.Controls.Add(this.rb_countdownON_allLED);
-            this.groupBox1.Controls.Add(this.lbl_countdownSeconds_allLED);
-            this.groupBox1.Location = new System.Drawing.Point(1013, 277);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(172, 106);
-            this.groupBox1.TabIndex = 30;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Countdown Timer";
+            this.grpBox_countdownTimer_allLED.Controls.Add(this.lbl_textCountdownSec_allLED);
+            this.grpBox_countdownTimer_allLED.Controls.Add(this.txtbox_countdownTime_allLED);
+            this.grpBox_countdownTimer_allLED.Controls.Add(this.btn_countdownReset_allLED);
+            this.grpBox_countdownTimer_allLED.Controls.Add(this.btn_countdownStart_allLED);
+            this.grpBox_countdownTimer_allLED.Controls.Add(this.rb_countdownOFF_allLED);
+            this.grpBox_countdownTimer_allLED.Controls.Add(this.rb_countdownON_allLED);
+            this.grpBox_countdownTimer_allLED.Controls.Add(this.lbl_countdownSeconds_allLED);
+            this.grpBox_countdownTimer_allLED.Location = new System.Drawing.Point(1013, 277);
+            this.grpBox_countdownTimer_allLED.Name = "grpBox_countdownTimer_allLED";
+            this.grpBox_countdownTimer_allLED.Size = new System.Drawing.Size(172, 106);
+            this.grpBox_countdownTimer_allLED.TabIndex = 30;
+            this.grpBox_countdownTimer_allLED.TabStop = false;
+            this.grpBox_countdownTimer_allLED.Text = "Countdown Timer";
             // 
             // lbl_textCountdownSec_allLED
             // 
@@ -1058,21 +1058,21 @@
             this.lbl_countdownSeconds_allLED.TabIndex = 0;
             this.lbl_countdownSeconds_allLED.Text = "0";
             // 
-            // groupBox2
+            // grpBox_countdownTimer5
             // 
-            this.groupBox2.Controls.Add(this.lbl_textCountdownSec5);
-            this.groupBox2.Controls.Add(this.txtbox_countdownTime5);
-            this.groupBox2.Controls.Add(this.btn_countdownReset5);
-            this.groupBox2.Controls.Add(this.btn_countdownStart5);
-            this.groupBox2.Controls.Add(this.rb_countdownOFF5);
-            this.groupBox2.Controls.Add(this.rb_countdownON5);
-            this.groupBox2.Controls.Add(this.lbl_countdownSeconds5);
-            this.groupBox2.Location = new System.Drawing.Point(814, 277);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(172, 106);
-            this.groupBox2.TabIndex = 29;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Countdown Timer";
+            this.grpBox_countdownTimer5.Controls.Add(this.lbl_textCountdownSec5);
+            this.grpBox_countdownTimer5.Controls.Add(this.txtbox_countdownTime5);
+            this.grpBox_countdownTimer5.Controls.Add(this.btn_countdownReset5);
+            this.grpBox_countdownTimer5.Controls.Add(this.btn_countdownStart5);
+            this.grpBox_countdownTimer5.Controls.Add(this.rb_countdownOFF5);
+            this.grpBox_countdownTimer5.Controls.Add(this.rb_countdownON5);
+            this.grpBox_countdownTimer5.Controls.Add(this.lbl_countdownSeconds5);
+            this.grpBox_countdownTimer5.Location = new System.Drawing.Point(814, 277);
+            this.grpBox_countdownTimer5.Name = "grpBox_countdownTimer5";
+            this.grpBox_countdownTimer5.Size = new System.Drawing.Size(172, 106);
+            this.grpBox_countdownTimer5.TabIndex = 29;
+            this.grpBox_countdownTimer5.TabStop = false;
+            this.grpBox_countdownTimer5.Text = "Countdown Timer";
             // 
             // lbl_textCountdownSec5
             // 
@@ -1151,21 +1151,21 @@
             this.lbl_countdownSeconds5.TabIndex = 0;
             this.lbl_countdownSeconds5.Text = "0";
             // 
-            // groupBox3
+            // grpBox_countdownTimer4
             // 
-            this.groupBox3.Controls.Add(this.lbl_textCountdownSec4);
-            this.groupBox3.Controls.Add(this.txtbox_countdownTime4);
-            this.groupBox3.Controls.Add(this.btn_countdownReset4);
-            this.groupBox3.Controls.Add(this.btn_countdownStart4);
-            this.groupBox3.Controls.Add(this.rb_countdownOFF4);
-            this.groupBox3.Controls.Add(this.rb_countdownON4);
-            this.groupBox3.Controls.Add(this.lbl_countdownSeconds4);
-            this.groupBox3.Location = new System.Drawing.Point(613, 277);
-            this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(172, 106);
-            this.groupBox3.TabIndex = 28;
-            this.groupBox3.TabStop = false;
-            this.groupBox3.Text = "Countdown Timer";
+            this.grpBox_countdownTimer4.Controls.Add(this.lbl_textCountdownSec4);
+            this.grpBox_countdownTimer4.Controls.Add(this.txtbox_countdownTime4);
+            this.grpBox_countdownTimer4.Controls.Add(this.btn_countdownReset4);
+            this.grpBox_countdownTimer4.Controls.Add(this.btn_countdownStart4);
+            this.grpBox_countdownTimer4.Controls.Add(this.rb_countdownOFF4);
+            this.grpBox_countdownTimer4.Controls.Add(this.rb_countdownON4);
+            this.grpBox_countdownTimer4.Controls.Add(this.lbl_countdownSeconds4);
+            this.grpBox_countdownTimer4.Location = new System.Drawing.Point(613, 277);
+            this.grpBox_countdownTimer4.Name = "grpBox_countdownTimer4";
+            this.grpBox_countdownTimer4.Size = new System.Drawing.Size(172, 106);
+            this.grpBox_countdownTimer4.TabIndex = 28;
+            this.grpBox_countdownTimer4.TabStop = false;
+            this.grpBox_countdownTimer4.Text = "Countdown Timer";
             // 
             // lbl_textCountdownSec4
             // 
@@ -2021,11 +2021,11 @@
             this.Controls.Add(this.grpBox_dateTimeControl3);
             this.Controls.Add(this.grpBox_dateTimeControl2);
             this.Controls.Add(this.grpBox_dateTimeControl1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.grpBox_countdownTimer_allLED);
             this.Controls.Add(this.grpBox_countdownTimer3);
-            this.Controls.Add(this.groupBox2);
+            this.Controls.Add(this.grpBox_countdownTimer5);
             this.Controls.Add(this.grpBox_countdownTimer2);
-            this.Controls.Add(this.groupBox3);
+            this.Controls.Add(this.grpBox_countdownTimer4);
             this.Controls.Add(this.grpBox_countdownTimer1);
             this.Controls.Add(this.lbl_title);
             this.Controls.Add(this.grpBox_switch_allLED);
@@ -2083,12 +2083,12 @@
             this.grpBox_countdownTimer2.PerformLayout();
             this.grpBox_countdownTimer3.ResumeLayout(false);
             this.grpBox_countdownTimer3.PerformLayout();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
-            this.groupBox3.ResumeLayout(false);
-            this.groupBox3.PerformLayout();
+            this.grpBox_countdownTimer_allLED.ResumeLayout(false);
+            this.grpBox_countdownTimer_allLED.PerformLayout();
+            this.grpBox_countdownTimer5.ResumeLayout(false);
+            this.grpBox_countdownTimer5.PerformLayout();
+            this.grpBox_countdownTimer4.ResumeLayout(false);
+            this.grpBox_countdownTimer4.PerformLayout();
             this.grpBox_dateTimeControl1.ResumeLayout(false);
             this.grpBox_dateTimeControl1.PerformLayout();
             this.grpBox_dateTimeStop1.ResumeLayout(false);
@@ -2188,7 +2188,7 @@
         private System.Windows.Forms.Label lbl_countdownSeconds3;
         private System.Windows.Forms.Timer timer_countdown3;
         private System.Windows.Forms.Timer timer_countdown4;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox grpBox_countdownTimer_allLED;
         private System.Windows.Forms.Label lbl_textCountdownSec_allLED;
         private System.Windows.Forms.TextBox txtbox_countdownTime_allLED;
         private System.Windows.Forms.Button btn_countdownReset_allLED;
@@ -2196,7 +2196,7 @@
         private System.Windows.Forms.RadioButton rb_countdownOFF_allLED;
         private System.Windows.Forms.RadioButton rb_countdownON_allLED;
         private System.Windows.Forms.Label lbl_countdownSeconds_allLED;
-        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox grpBox_countdownTimer5;
         private System.Windows.Forms.Label lbl_textCountdownSec5;
         private System.Windows.Forms.TextBox txtbox_countdownTime5;
         private System.Windows.Forms.Button btn_countdownReset5;
@@ -2204,7 +2204,7 @@
         private System.Windows.Forms.RadioButton rb_countdownOFF5;
         private System.Windows.Forms.RadioButton rb_countdownON5;
         private System.Windows.Forms.Label lbl_countdownSeconds5;
-        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox grpBox_countdownTimer4;
         private System.Windows.Forms.Label lbl_textCountdownSec4;
         private System.Windows.Forms.TextBox txtbox_countdownTime4;
         private System.Windows.Forms.Button btn_countdownReset4;

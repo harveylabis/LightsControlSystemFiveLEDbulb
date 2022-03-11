@@ -71,6 +71,7 @@ namespace LightsControlSystemFiveLED
         {
             InitializeComponent();
             getAvailableCOMPorts();
+            controlAllGroupBox(false);
 
             // display port names in combo box
             foreach (string port in ports)
@@ -119,9 +120,11 @@ namespace LightsControlSystemFiveLED
             if (!isConnected)
             {
                 connect();
+                controlAllGroupBox(true);
             } else
             {
                 disconnect();
+                controlAllGroupBox(false);
             }
         }
 
@@ -241,6 +244,32 @@ namespace LightsControlSystemFiveLED
             }
         }
 
+        private void controlAllGroupBox(bool state)
+        {
+            grpBox_switchLED1.Enabled = state;
+            grpBox_countdownTimer1.Enabled = state;
+            grpBox_dateTimeControl1.Enabled = state;
+
+            grpBox_switchLED2.Enabled = state;
+            grpBox_countdownTimer2.Enabled = state;
+            grpBox_dateTimeControl2.Enabled = state;
+
+            grpBox_switchLED3.Enabled = state;
+            grpBox_countdownTimer3.Enabled = state;
+            grpBox_dateTimeControl3.Enabled = state;
+
+            grpBox_switchLED4.Enabled = state;
+            grpBox_countdownTimer4.Enabled = state;
+            grpBox_dateTimeControl4.Enabled = state;
+
+            grpBox_switchLED5.Enabled = state;
+            grpBox_countdownTimer5.Enabled = state;
+            grpBox_dateTimeControl5.Enabled = state;
+
+            grpBox_switch_allLED.Enabled = state;
+            grpBox_countdownTimer_allLED.Enabled = state;
+            grpBox_dateTimeControl_allLED.Enabled = state;
+        }
 
         // LED 1 functions
         // basic control
