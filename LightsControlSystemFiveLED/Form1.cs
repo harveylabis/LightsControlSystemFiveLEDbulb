@@ -205,7 +205,31 @@ namespace LightsControlSystemFiveLED
                 dtp_dateTime_startDate1.Enabled = state;
                 dtp_dateTime_stopTime1.Enabled = state;
                 dtp_dateTime_stopDate1.Enabled = state;
-            }
+            } else if (pinNumber == ON_LED2)
+            {
+                dtp_dateTime_startTime2.Enabled = state;
+                dtp_dateTime_startDate2.Enabled = state;
+                dtp_dateTime_stopTime2.Enabled = state;
+                dtp_dateTime_stopDate2.Enabled = state;
+            } else if (pinNumber == ON_LED3)
+            {
+                dtp_dateTime_startTime3.Enabled = state;
+                dtp_dateTime_startDate3.Enabled = state;
+                dtp_dateTime_stopTime3.Enabled = state;
+                dtp_dateTime_stopDate3.Enabled = state;
+            } else if (pinNumber == ON_LED4)
+            {
+                dtp_dateTime_startTime4.Enabled = state;
+                dtp_dateTime_startDate4.Enabled = state;
+                dtp_dateTime_stopTime4.Enabled = state;
+                dtp_dateTime_stopDate4.Enabled = state;
+            } /* else if (pinNumber == ON_LED5)
+            {
+                dtp_dateTime_startTime5.Enabled = state;
+                dtp_dateTime_startDate5.Enabled = state;
+                dtp_dateTime_stopTime5.Enabled = state;
+                dtp_dateTime_stopDate5.Enabled = state;
+            } */
         }
 
 
@@ -328,6 +352,7 @@ namespace LightsControlSystemFiveLED
             dateTimeSelectionControls(ON_LED1, true);
             turn(OFF_LED1);
             showImage(OFF_LED1);
+            dateTime_start1 = false;
         }
 
         // LED 2 functions
@@ -452,6 +477,7 @@ namespace LightsControlSystemFiveLED
             dateTimeSelectionControls(ON_LED2, true);
             turn(OFF_LED2);
             showImage(OFF_LED2);
+            dateTime_start2 = false;
         }
 
 
@@ -519,6 +545,67 @@ namespace LightsControlSystemFiveLED
             lbl_countdownSeconds3.Text = countdown_seconds3.ToString();
         }
 
+        // date and time control
+        private void btn_dateTime_Set3_Click(object sender, EventArgs e)
+        {
+            myStartDate3 = dtp_dateTime_startDate3.Value.Date + dtp_dateTime_startTime3.Value.TimeOfDay;
+            myStopDate3 = dtp_dateTime_stopDate3.Value.Date + dtp_dateTime_stopTime3.Value.TimeOfDay;
+            dateTimeSelectionControls(ON_LED3, false);
+            timer_dateTime3.Start();
+        }
+
+        private void timer_dateTime3_Tick(object sender, EventArgs e)
+        {
+            DateTime dateTimeNow3 = DateTime.Now;
+            if (!dateTime_start3)
+            {
+                bool compare_start3 = (dateTimeNow3.Date == myStartDate3.Date) && (dateTimeNow3.Hour == myStartDate3.Hour) && (dateTimeNow3.Minute == myStartDate3.Minute);
+                if (compare_start3)
+                {
+                    if (rb_dateTimeON3.Checked)
+                    {
+                        turn(ON_LED3);
+                        showImage(ON_LED3);
+                    }
+                    else
+                    {
+                        turn(OFF_LED3);
+                        showImage(OFF_LED3);
+                    }
+                    dateTime_start3 = true;
+                }
+            }
+            else
+            {
+                bool compare_stop3 = (dateTimeNow3.Date == myStopDate3.Date) && (dateTimeNow3.Hour == myStopDate3.Hour) && (dateTimeNow3.Minute == myStopDate3.Minute);
+                if (compare_stop3)
+                {
+                    if (rb_dateTimeON3.Checked)
+                    {
+                        turn(OFF_LED3);
+                        showImage(OFF_LED3);
+                    }
+                    else
+                    {
+                        turn(ON_LED3);
+                        showImage(ON_LED3);
+                    }
+                    timer_dateTime3.Stop();
+                    dateTimeSelectionControls(ON_LED3, true);
+                    dateTime_start3 = false;
+                }
+            }
+        }
+
+        private void btn_dateTime_Reset3_Click(object sender, EventArgs e)
+        {
+            timer_dateTime3.Stop();
+            dateTimeSelectionControls(ON_LED3, true);
+            turn(OFF_LED3);
+            showImage(OFF_LED3);
+            dateTime_start3 = false;
+        }
+
         // LED 4 functions
         // basic controls
         private void btn_ON_LED4_Click(object sender, EventArgs e)
@@ -581,6 +668,67 @@ namespace LightsControlSystemFiveLED
             timer_countdown4.Stop();
             countdown_seconds4 = 0;
             lbl_countdownSeconds4.Text = countdown_seconds4.ToString();
+        }
+
+        // date and time control
+        private void btn_dateTime_Set4_Click(object sender, EventArgs e)
+        {
+            myStartDate4 = dtp_dateTime_startDate4.Value.Date + dtp_dateTime_startTime4.Value.TimeOfDay;
+            myStopDate4 = dtp_dateTime_stopDate4.Value.Date + dtp_dateTime_stopTime4.Value.TimeOfDay;
+            dateTimeSelectionControls(ON_LED4, false);
+            timer_dateTime4.Start();
+        }
+
+        private void timer_dateTime4_Tick(object sender, EventArgs e)
+        {
+            DateTime dateTimeNow4 = DateTime.Now;
+            if (!dateTime_start4)
+            {
+                bool compare_start4 = (dateTimeNow4.Date == myStartDate4.Date) && (dateTimeNow4.Hour == myStartDate4.Hour) && (dateTimeNow4.Minute == myStartDate4.Minute);
+                if (compare_start4)
+                {
+                    if (rb_dateTimeON4.Checked)
+                    {
+                        turn(ON_LED4);
+                        showImage(ON_LED4);
+                    }
+                    else
+                    {
+                        turn(OFF_LED4);
+                        showImage(OFF_LED4);
+                    }
+                    dateTime_start4 = true;
+                }
+            }
+            else
+            {
+                bool compare_stop4 = (dateTimeNow4.Date == myStopDate4.Date) && (dateTimeNow4.Hour == myStopDate4.Hour) && (dateTimeNow4.Minute == myStopDate4.Minute);
+                if (compare_stop4)
+                {
+                    if (rb_dateTimeON4.Checked)
+                    {
+                        turn(OFF_LED4);
+                        showImage(OFF_LED4);
+                    }
+                    else
+                    {
+                        turn(ON_LED4);
+                        showImage(ON_LED4);
+                    }
+                    timer_dateTime4.Stop();
+                    dateTimeSelectionControls(ON_LED4, true);
+                    dateTime_start4 = false;
+                }
+            }
+        }
+
+        private void btn_dateTime_Reset4_Click(object sender, EventArgs e)
+        {
+            timer_dateTime4.Stop();
+            dateTimeSelectionControls(ON_LED4, true);
+            turn(OFF_LED4);
+            showImage(OFF_LED4);
+            dateTime_start4 = false;
         }
 
         // LED 5 functions
