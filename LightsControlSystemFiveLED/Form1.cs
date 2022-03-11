@@ -394,6 +394,66 @@ namespace LightsControlSystemFiveLED
             lbl_countdownSeconds2.Text = countdown_seconds2.ToString();
         }
 
+        // date and time control
+        private void btn_dateTime_Set2_Click(object sender, EventArgs e)
+        {
+            myStartDate2 = dtp_dateTime_startDate2.Value.Date + dtp_dateTime_startTime2.Value.TimeOfDay;
+            myStopDate2 = dtp_dateTime_stopDate2.Value.Date + dtp_dateTime_stopTime2.Value.TimeOfDay;
+            dateTimeSelectionControls(ON_LED2, false);
+            timer_dateTime2.Start();
+        }
+
+        private void timer_dateTime2_Tick(object sender, EventArgs e)
+        {
+            DateTime dateTimeNow2 = DateTime.Now;
+            if (!dateTime_start2)
+            {
+                bool compare_start2 = (dateTimeNow2.Date == myStartDate2.Date) && (dateTimeNow2.Hour == myStartDate2.Hour) && (dateTimeNow2.Minute == myStartDate2.Minute);
+                if (compare_start2)
+                {
+                    if (rb_dateTimeON2.Checked)
+                    {
+                        turn(ON_LED2);
+                        showImage(ON_LED2);
+                    }
+                    else
+                    {
+                        turn(OFF_LED2);
+                        showImage(OFF_LED2);
+                    }
+                    dateTime_start2 = true;
+                }
+            }
+            else
+            {
+                bool compare_stop2 = (dateTimeNow2.Date == myStopDate2.Date) && (dateTimeNow2.Hour == myStopDate2.Hour) && (dateTimeNow2.Minute == myStopDate2.Minute);
+                if (compare_stop2)
+                {
+                    if (rb_dateTimeON2.Checked)
+                    {
+                        turn(OFF_LED2);
+                        showImage(OFF_LED2);
+                    }
+                    else
+                    {
+                        turn(ON_LED2);
+                        showImage(ON_LED2);
+                    }
+                    timer_dateTime2.Stop();
+                    dateTimeSelectionControls(ON_LED2, true);
+                    dateTime_start2 = false;
+                }
+            }
+        }
+
+        private void btn_dateTime_Reset2_Click(object sender, EventArgs e)
+        {
+            timer_dateTime2.Stop();
+            dateTimeSelectionControls(ON_LED2, true);
+            turn(OFF_LED2);
+            showImage(OFF_LED2);
+        }
+
 
         // LED 3 functions
         // basic control
