@@ -171,6 +171,30 @@
             this.dtp_dateTime_startDate4 = new System.Windows.Forms.DateTimePicker();
             this.rb_dateTimeON4 = new System.Windows.Forms.RadioButton();
             this.timer_dateTime4 = new System.Windows.Forms.Timer(this.components);
+            this.grpBox_dateTimeControl5 = new System.Windows.Forms.GroupBox();
+            this.btn_dateTime_Reset5 = new System.Windows.Forms.Button();
+            this.btn_dateTime_Set5 = new System.Windows.Forms.Button();
+            this.grpBox_dateTimeStop5 = new System.Windows.Forms.GroupBox();
+            this.dtp_dateTime_stopTime5 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_dateTime_stopDate5 = new System.Windows.Forms.DateTimePicker();
+            this.rb_dateTimeOFF5 = new System.Windows.Forms.RadioButton();
+            this.grpBox_dateTimeStart5 = new System.Windows.Forms.GroupBox();
+            this.dtp_dateTime_startTime5 = new System.Windows.Forms.DateTimePicker();
+            this.dtp_dateTime_startDate5 = new System.Windows.Forms.DateTimePicker();
+            this.rb_dateTimeON5 = new System.Windows.Forms.RadioButton();
+            this.timer_dateTime5 = new System.Windows.Forms.Timer(this.components);
+            this.timer_dateTime_allLED = new System.Windows.Forms.Timer(this.components);
+            this.grpBox_dateTimeControl_allLED = new System.Windows.Forms.GroupBox();
+            this.btn_dateTime_Reset_allLED = new System.Windows.Forms.Button();
+            this.btn_dateTime_Set_allLED = new System.Windows.Forms.Button();
+            this.grpBox_dateTimeStop_allLED = new System.Windows.Forms.GroupBox();
+            this.dtp_dateTime_stopTime_allLED = new System.Windows.Forms.DateTimePicker();
+            this.dtp_dateTime_stopDate_allLED = new System.Windows.Forms.DateTimePicker();
+            this.rb_dateTimeOFF_allLED = new System.Windows.Forms.RadioButton();
+            this.grpBox_dateTimeStart_allLED = new System.Windows.Forms.GroupBox();
+            this.dtp_dateTime_startTime_allLED = new System.Windows.Forms.DateTimePicker();
+            this.dtp_dateTime_startDate_allLED = new System.Windows.Forms.DateTimePicker();
+            this.rb_dateTimeON_allLED = new System.Windows.Forms.RadioButton();
             this.gpb_portControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_LED1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_ON_LED1)).BeginInit();
@@ -208,6 +232,12 @@
             this.grpBox_dateTimeControl4.SuspendLayout();
             this.grpBox_dateTimeStop4.SuspendLayout();
             this.grpBox_dateTimeStart4.SuspendLayout();
+            this.grpBox_dateTimeControl5.SuspendLayout();
+            this.grpBox_dateTimeStop5.SuspendLayout();
+            this.grpBox_dateTimeStart5.SuspendLayout();
+            this.grpBox_dateTimeControl_allLED.SuspendLayout();
+            this.grpBox_dateTimeStop_allLED.SuspendLayout();
+            this.grpBox_dateTimeStart_allLED.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbl_title
@@ -1728,11 +1758,265 @@
             this.timer_dateTime4.Interval = 1000;
             this.timer_dateTime4.Tick += new System.EventHandler(this.timer_dateTime4_Tick);
             // 
+            // grpBox_dateTimeControl5
+            // 
+            this.grpBox_dateTimeControl5.Controls.Add(this.btn_dateTime_Reset5);
+            this.grpBox_dateTimeControl5.Controls.Add(this.btn_dateTime_Set5);
+            this.grpBox_dateTimeControl5.Controls.Add(this.grpBox_dateTimeStop5);
+            this.grpBox_dateTimeControl5.Controls.Add(this.rb_dateTimeOFF5);
+            this.grpBox_dateTimeControl5.Controls.Add(this.grpBox_dateTimeStart5);
+            this.grpBox_dateTimeControl5.Controls.Add(this.rb_dateTimeON5);
+            this.grpBox_dateTimeControl5.Location = new System.Drawing.Point(814, 389);
+            this.grpBox_dateTimeControl5.Name = "grpBox_dateTimeControl5";
+            this.grpBox_dateTimeControl5.Size = new System.Drawing.Size(172, 261);
+            this.grpBox_dateTimeControl5.TabIndex = 39;
+            this.grpBox_dateTimeControl5.TabStop = false;
+            this.grpBox_dateTimeControl5.Text = "Date and Time Control";
+            // 
+            // btn_dateTime_Reset5
+            // 
+            this.btn_dateTime_Reset5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_dateTime_Reset5.Location = new System.Drawing.Point(94, 224);
+            this.btn_dateTime_Reset5.Name = "btn_dateTime_Reset5";
+            this.btn_dateTime_Reset5.Size = new System.Drawing.Size(66, 23);
+            this.btn_dateTime_Reset5.TabIndex = 35;
+            this.btn_dateTime_Reset5.Text = "Reset";
+            this.btn_dateTime_Reset5.UseVisualStyleBackColor = true;
+            this.btn_dateTime_Reset5.Click += new System.EventHandler(this.btn_dateTime_Reset5_Click);
+            // 
+            // btn_dateTime_Set5
+            // 
+            this.btn_dateTime_Set5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_dateTime_Set5.Location = new System.Drawing.Point(11, 224);
+            this.btn_dateTime_Set5.Name = "btn_dateTime_Set5";
+            this.btn_dateTime_Set5.Size = new System.Drawing.Size(66, 23);
+            this.btn_dateTime_Set5.TabIndex = 34;
+            this.btn_dateTime_Set5.Text = "Set";
+            this.btn_dateTime_Set5.UseVisualStyleBackColor = true;
+            this.btn_dateTime_Set5.Click += new System.EventHandler(this.btn_dateTime_Set5_Click);
+            // 
+            // grpBox_dateTimeStop5
+            // 
+            this.grpBox_dateTimeStop5.Controls.Add(this.dtp_dateTime_stopTime5);
+            this.grpBox_dateTimeStop5.Controls.Add(this.dtp_dateTime_stopDate5);
+            this.grpBox_dateTimeStop5.Location = new System.Drawing.Point(11, 135);
+            this.grpBox_dateTimeStop5.Name = "grpBox_dateTimeStop5";
+            this.grpBox_dateTimeStop5.Size = new System.Drawing.Size(149, 83);
+            this.grpBox_dateTimeStop5.TabIndex = 33;
+            this.grpBox_dateTimeStop5.TabStop = false;
+            this.grpBox_dateTimeStop5.Text = "Stop Date and Time";
+            // 
+            // dtp_dateTime_stopTime5
+            // 
+            this.dtp_dateTime_stopTime5.CustomFormat = "hh:mm tt";
+            this.dtp_dateTime_stopTime5.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_dateTime_stopTime5.Location = new System.Drawing.Point(43, 24);
+            this.dtp_dateTime_stopTime5.Name = "dtp_dateTime_stopTime5";
+            this.dtp_dateTime_stopTime5.ShowUpDown = true;
+            this.dtp_dateTime_stopTime5.Size = new System.Drawing.Size(66, 20);
+            this.dtp_dateTime_stopTime5.TabIndex = 1;
+            // 
+            // dtp_dateTime_stopDate5
+            // 
+            this.dtp_dateTime_stopDate5.CustomFormat = "MMMM dd, yyyy";
+            this.dtp_dateTime_stopDate5.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_dateTime_stopDate5.Location = new System.Drawing.Point(8, 53);
+            this.dtp_dateTime_stopDate5.Name = "dtp_dateTime_stopDate5";
+            this.dtp_dateTime_stopDate5.Size = new System.Drawing.Size(133, 20);
+            this.dtp_dateTime_stopDate5.TabIndex = 0;
+            // 
+            // rb_dateTimeOFF5
+            // 
+            this.rb_dateTimeOFF5.AutoSize = true;
+            this.rb_dateTimeOFF5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rb_dateTimeOFF5.Location = new System.Drawing.Point(99, 20);
+            this.rb_dateTimeOFF5.Name = "rb_dateTimeOFF5";
+            this.rb_dateTimeOFF5.Size = new System.Drawing.Size(45, 17);
+            this.rb_dateTimeOFF5.TabIndex = 1;
+            this.rb_dateTimeOFF5.TabStop = true;
+            this.rb_dateTimeOFF5.Text = "OFF";
+            this.rb_dateTimeOFF5.UseVisualStyleBackColor = true;
+            // 
+            // grpBox_dateTimeStart5
+            // 
+            this.grpBox_dateTimeStart5.Controls.Add(this.dtp_dateTime_startTime5);
+            this.grpBox_dateTimeStart5.Controls.Add(this.dtp_dateTime_startDate5);
+            this.grpBox_dateTimeStart5.Location = new System.Drawing.Point(11, 46);
+            this.grpBox_dateTimeStart5.Name = "grpBox_dateTimeStart5";
+            this.grpBox_dateTimeStart5.Size = new System.Drawing.Size(149, 83);
+            this.grpBox_dateTimeStart5.TabIndex = 32;
+            this.grpBox_dateTimeStart5.TabStop = false;
+            this.grpBox_dateTimeStart5.Text = "Start Date and Time";
+            // 
+            // dtp_dateTime_startTime5
+            // 
+            this.dtp_dateTime_startTime5.CustomFormat = "hh:mm tt";
+            this.dtp_dateTime_startTime5.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_dateTime_startTime5.Location = new System.Drawing.Point(43, 24);
+            this.dtp_dateTime_startTime5.Name = "dtp_dateTime_startTime5";
+            this.dtp_dateTime_startTime5.ShowUpDown = true;
+            this.dtp_dateTime_startTime5.Size = new System.Drawing.Size(66, 20);
+            this.dtp_dateTime_startTime5.TabIndex = 1;
+            // 
+            // dtp_dateTime_startDate5
+            // 
+            this.dtp_dateTime_startDate5.CustomFormat = "MMMM dd, yyyy";
+            this.dtp_dateTime_startDate5.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_dateTime_startDate5.Location = new System.Drawing.Point(8, 53);
+            this.dtp_dateTime_startDate5.Name = "dtp_dateTime_startDate5";
+            this.dtp_dateTime_startDate5.Size = new System.Drawing.Size(133, 20);
+            this.dtp_dateTime_startDate5.TabIndex = 0;
+            // 
+            // rb_dateTimeON5
+            // 
+            this.rb_dateTimeON5.AutoSize = true;
+            this.rb_dateTimeON5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rb_dateTimeON5.Location = new System.Drawing.Point(24, 20);
+            this.rb_dateTimeON5.Name = "rb_dateTimeON5";
+            this.rb_dateTimeON5.Size = new System.Drawing.Size(41, 17);
+            this.rb_dateTimeON5.TabIndex = 0;
+            this.rb_dateTimeON5.TabStop = true;
+            this.rb_dateTimeON5.Text = "ON";
+            this.rb_dateTimeON5.UseVisualStyleBackColor = true;
+            // 
+            // timer_dateTime5
+            // 
+            this.timer_dateTime5.Interval = 1000;
+            this.timer_dateTime5.Tick += new System.EventHandler(this.timer_dateTime5_Tick);
+            // 
+            // timer_dateTime_allLED
+            // 
+            this.timer_dateTime_allLED.Interval = 1000;
+            this.timer_dateTime_allLED.Tick += new System.EventHandler(this.timer_dateTime_allLED_Tick);
+            // 
+            // grpBox_dateTimeControl_allLED
+            // 
+            this.grpBox_dateTimeControl_allLED.Controls.Add(this.btn_dateTime_Reset_allLED);
+            this.grpBox_dateTimeControl_allLED.Controls.Add(this.btn_dateTime_Set_allLED);
+            this.grpBox_dateTimeControl_allLED.Controls.Add(this.grpBox_dateTimeStop_allLED);
+            this.grpBox_dateTimeControl_allLED.Controls.Add(this.rb_dateTimeOFF_allLED);
+            this.grpBox_dateTimeControl_allLED.Controls.Add(this.grpBox_dateTimeStart_allLED);
+            this.grpBox_dateTimeControl_allLED.Controls.Add(this.rb_dateTimeON_allLED);
+            this.grpBox_dateTimeControl_allLED.Location = new System.Drawing.Point(1013, 389);
+            this.grpBox_dateTimeControl_allLED.Name = "grpBox_dateTimeControl_allLED";
+            this.grpBox_dateTimeControl_allLED.Size = new System.Drawing.Size(172, 261);
+            this.grpBox_dateTimeControl_allLED.TabIndex = 40;
+            this.grpBox_dateTimeControl_allLED.TabStop = false;
+            this.grpBox_dateTimeControl_allLED.Text = "Date and Time Control";
+            // 
+            // btn_dateTime_Reset_allLED
+            // 
+            this.btn_dateTime_Reset_allLED.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_dateTime_Reset_allLED.Location = new System.Drawing.Point(94, 224);
+            this.btn_dateTime_Reset_allLED.Name = "btn_dateTime_Reset_allLED";
+            this.btn_dateTime_Reset_allLED.Size = new System.Drawing.Size(66, 23);
+            this.btn_dateTime_Reset_allLED.TabIndex = 35;
+            this.btn_dateTime_Reset_allLED.Text = "Reset";
+            this.btn_dateTime_Reset_allLED.UseVisualStyleBackColor = true;
+            this.btn_dateTime_Reset_allLED.Click += new System.EventHandler(this.btn_dateTime_Reset_allLED_Click);
+            // 
+            // btn_dateTime_Set_allLED
+            // 
+            this.btn_dateTime_Set_allLED.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn_dateTime_Set_allLED.Location = new System.Drawing.Point(11, 224);
+            this.btn_dateTime_Set_allLED.Name = "btn_dateTime_Set_allLED";
+            this.btn_dateTime_Set_allLED.Size = new System.Drawing.Size(66, 23);
+            this.btn_dateTime_Set_allLED.TabIndex = 34;
+            this.btn_dateTime_Set_allLED.Text = "Set";
+            this.btn_dateTime_Set_allLED.UseVisualStyleBackColor = true;
+            this.btn_dateTime_Set_allLED.Click += new System.EventHandler(this.btn_dateTime_Set_allLED_Click);
+            // 
+            // grpBox_dateTimeStop_allLED
+            // 
+            this.grpBox_dateTimeStop_allLED.Controls.Add(this.dtp_dateTime_stopTime_allLED);
+            this.grpBox_dateTimeStop_allLED.Controls.Add(this.dtp_dateTime_stopDate_allLED);
+            this.grpBox_dateTimeStop_allLED.Location = new System.Drawing.Point(11, 135);
+            this.grpBox_dateTimeStop_allLED.Name = "grpBox_dateTimeStop_allLED";
+            this.grpBox_dateTimeStop_allLED.Size = new System.Drawing.Size(149, 83);
+            this.grpBox_dateTimeStop_allLED.TabIndex = 33;
+            this.grpBox_dateTimeStop_allLED.TabStop = false;
+            this.grpBox_dateTimeStop_allLED.Text = "Stop Date and Time";
+            // 
+            // dtp_dateTime_stopTime_allLED
+            // 
+            this.dtp_dateTime_stopTime_allLED.CustomFormat = "hh:mm tt";
+            this.dtp_dateTime_stopTime_allLED.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_dateTime_stopTime_allLED.Location = new System.Drawing.Point(43, 24);
+            this.dtp_dateTime_stopTime_allLED.Name = "dtp_dateTime_stopTime_allLED";
+            this.dtp_dateTime_stopTime_allLED.ShowUpDown = true;
+            this.dtp_dateTime_stopTime_allLED.Size = new System.Drawing.Size(66, 20);
+            this.dtp_dateTime_stopTime_allLED.TabIndex = 1;
+            // 
+            // dtp_dateTime_stopDate_allLED
+            // 
+            this.dtp_dateTime_stopDate_allLED.CustomFormat = "MMMM dd, yyyy";
+            this.dtp_dateTime_stopDate_allLED.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_dateTime_stopDate_allLED.Location = new System.Drawing.Point(8, 53);
+            this.dtp_dateTime_stopDate_allLED.Name = "dtp_dateTime_stopDate_allLED";
+            this.dtp_dateTime_stopDate_allLED.Size = new System.Drawing.Size(133, 20);
+            this.dtp_dateTime_stopDate_allLED.TabIndex = 0;
+            // 
+            // rb_dateTimeOFF_allLED
+            // 
+            this.rb_dateTimeOFF_allLED.AutoSize = true;
+            this.rb_dateTimeOFF_allLED.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rb_dateTimeOFF_allLED.Location = new System.Drawing.Point(99, 20);
+            this.rb_dateTimeOFF_allLED.Name = "rb_dateTimeOFF_allLED";
+            this.rb_dateTimeOFF_allLED.Size = new System.Drawing.Size(45, 17);
+            this.rb_dateTimeOFF_allLED.TabIndex = 1;
+            this.rb_dateTimeOFF_allLED.TabStop = true;
+            this.rb_dateTimeOFF_allLED.Text = "OFF";
+            this.rb_dateTimeOFF_allLED.UseVisualStyleBackColor = true;
+            // 
+            // grpBox_dateTimeStart_allLED
+            // 
+            this.grpBox_dateTimeStart_allLED.Controls.Add(this.dtp_dateTime_startTime_allLED);
+            this.grpBox_dateTimeStart_allLED.Controls.Add(this.dtp_dateTime_startDate_allLED);
+            this.grpBox_dateTimeStart_allLED.Location = new System.Drawing.Point(11, 46);
+            this.grpBox_dateTimeStart_allLED.Name = "grpBox_dateTimeStart_allLED";
+            this.grpBox_dateTimeStart_allLED.Size = new System.Drawing.Size(149, 83);
+            this.grpBox_dateTimeStart_allLED.TabIndex = 32;
+            this.grpBox_dateTimeStart_allLED.TabStop = false;
+            this.grpBox_dateTimeStart_allLED.Text = "Start Date and Time";
+            // 
+            // dtp_dateTime_startTime_allLED
+            // 
+            this.dtp_dateTime_startTime_allLED.CustomFormat = "hh:mm tt";
+            this.dtp_dateTime_startTime_allLED.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_dateTime_startTime_allLED.Location = new System.Drawing.Point(43, 24);
+            this.dtp_dateTime_startTime_allLED.Name = "dtp_dateTime_startTime_allLED";
+            this.dtp_dateTime_startTime_allLED.ShowUpDown = true;
+            this.dtp_dateTime_startTime_allLED.Size = new System.Drawing.Size(66, 20);
+            this.dtp_dateTime_startTime_allLED.TabIndex = 1;
+            // 
+            // dtp_dateTime_startDate_allLED
+            // 
+            this.dtp_dateTime_startDate_allLED.CustomFormat = "MMMM dd, yyyy";
+            this.dtp_dateTime_startDate_allLED.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtp_dateTime_startDate_allLED.Location = new System.Drawing.Point(8, 53);
+            this.dtp_dateTime_startDate_allLED.Name = "dtp_dateTime_startDate_allLED";
+            this.dtp_dateTime_startDate_allLED.Size = new System.Drawing.Size(133, 20);
+            this.dtp_dateTime_startDate_allLED.TabIndex = 0;
+            // 
+            // rb_dateTimeON_allLED
+            // 
+            this.rb_dateTimeON_allLED.AutoSize = true;
+            this.rb_dateTimeON_allLED.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.rb_dateTimeON_allLED.Location = new System.Drawing.Point(24, 20);
+            this.rb_dateTimeON_allLED.Name = "rb_dateTimeON_allLED";
+            this.rb_dateTimeON_allLED.Size = new System.Drawing.Size(41, 17);
+            this.rb_dateTimeON_allLED.TabIndex = 0;
+            this.rb_dateTimeON_allLED.TabStop = true;
+            this.rb_dateTimeON_allLED.Text = "ON";
+            this.rb_dateTimeON_allLED.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1202, 667);
+            this.Controls.Add(this.grpBox_dateTimeControl_allLED);
+            this.Controls.Add(this.grpBox_dateTimeControl5);
             this.Controls.Add(this.grpBox_dateTimeControl4);
             this.Controls.Add(this.grpBox_dateTimeControl3);
             this.Controls.Add(this.grpBox_dateTimeControl2);
@@ -1821,6 +2105,14 @@
             this.grpBox_dateTimeControl4.PerformLayout();
             this.grpBox_dateTimeStop4.ResumeLayout(false);
             this.grpBox_dateTimeStart4.ResumeLayout(false);
+            this.grpBox_dateTimeControl5.ResumeLayout(false);
+            this.grpBox_dateTimeControl5.PerformLayout();
+            this.grpBox_dateTimeStop5.ResumeLayout(false);
+            this.grpBox_dateTimeStart5.ResumeLayout(false);
+            this.grpBox_dateTimeControl_allLED.ResumeLayout(false);
+            this.grpBox_dateTimeControl_allLED.PerformLayout();
+            this.grpBox_dateTimeStop_allLED.ResumeLayout(false);
+            this.grpBox_dateTimeStart_allLED.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1970,6 +2262,30 @@
         private System.Windows.Forms.DateTimePicker dtp_dateTime_startDate4;
         private System.Windows.Forms.RadioButton rb_dateTimeON4;
         private System.Windows.Forms.Timer timer_dateTime4;
+        private System.Windows.Forms.GroupBox grpBox_dateTimeControl5;
+        private System.Windows.Forms.Button btn_dateTime_Reset5;
+        private System.Windows.Forms.Button btn_dateTime_Set5;
+        private System.Windows.Forms.GroupBox grpBox_dateTimeStop5;
+        private System.Windows.Forms.DateTimePicker dtp_dateTime_stopTime5;
+        private System.Windows.Forms.DateTimePicker dtp_dateTime_stopDate5;
+        private System.Windows.Forms.RadioButton rb_dateTimeOFF5;
+        private System.Windows.Forms.GroupBox grpBox_dateTimeStart5;
+        private System.Windows.Forms.DateTimePicker dtp_dateTime_startTime5;
+        private System.Windows.Forms.DateTimePicker dtp_dateTime_startDate5;
+        private System.Windows.Forms.RadioButton rb_dateTimeON5;
+        private System.Windows.Forms.Timer timer_dateTime5;
+        private System.Windows.Forms.Timer timer_dateTime_allLED;
+        private System.Windows.Forms.GroupBox grpBox_dateTimeControl_allLED;
+        private System.Windows.Forms.Button btn_dateTime_Reset_allLED;
+        private System.Windows.Forms.Button btn_dateTime_Set_allLED;
+        private System.Windows.Forms.GroupBox grpBox_dateTimeStop_allLED;
+        private System.Windows.Forms.DateTimePicker dtp_dateTime_stopTime_allLED;
+        private System.Windows.Forms.DateTimePicker dtp_dateTime_stopDate_allLED;
+        private System.Windows.Forms.RadioButton rb_dateTimeOFF_allLED;
+        private System.Windows.Forms.GroupBox grpBox_dateTimeStart_allLED;
+        private System.Windows.Forms.DateTimePicker dtp_dateTime_startTime_allLED;
+        private System.Windows.Forms.DateTimePicker dtp_dateTime_startDate_allLED;
+        private System.Windows.Forms.RadioButton rb_dateTimeON_allLED;
     }
 }
 

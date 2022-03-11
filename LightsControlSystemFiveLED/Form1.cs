@@ -62,6 +62,9 @@ namespace LightsControlSystemFiveLED
         string ON_allLED = "6";
         string OFF_allLED = "f";
         int countdown_seconds_allLED = 0;
+        bool dateTime_start_allLED = false;
+        DateTime myStartDate_allLED;
+        DateTime myStopDate_allLED;
 
 
         public Form1()
@@ -223,13 +226,19 @@ namespace LightsControlSystemFiveLED
                 dtp_dateTime_startDate4.Enabled = state;
                 dtp_dateTime_stopTime4.Enabled = state;
                 dtp_dateTime_stopDate4.Enabled = state;
-            } /* else if (pinNumber == ON_LED5)
+            } else if (pinNumber == ON_LED5)
             {
                 dtp_dateTime_startTime5.Enabled = state;
                 dtp_dateTime_startDate5.Enabled = state;
                 dtp_dateTime_stopTime5.Enabled = state;
                 dtp_dateTime_stopDate5.Enabled = state;
-            } */
+            } else if (pinNumber == ON_allLED)
+            {
+                dtp_dateTime_startTime_allLED.Enabled = state;
+                dtp_dateTime_startDate_allLED.Enabled = state;
+                dtp_dateTime_stopTime_allLED.Enabled = state;
+                dtp_dateTime_stopDate_allLED.Enabled = state;
+            }
         }
 
 
@@ -795,6 +804,67 @@ namespace LightsControlSystemFiveLED
             lbl_countdownSeconds5.Text = countdown_seconds5.ToString();
         }
 
+        // date and time control
+        private void btn_dateTime_Set5_Click(object sender, EventArgs e)
+        {
+            myStartDate5 = dtp_dateTime_startDate5.Value.Date + dtp_dateTime_startTime5.Value.TimeOfDay;
+            myStopDate5 = dtp_dateTime_stopDate5.Value.Date + dtp_dateTime_stopTime5.Value.TimeOfDay;
+            dateTimeSelectionControls(ON_LED5, false);
+            timer_dateTime5.Start();
+        }
+
+        private void timer_dateTime5_Tick(object sender, EventArgs e)
+        {
+            DateTime dateTimeNow5 = DateTime.Now;
+            if (!dateTime_start5)
+            {
+                bool compare_start5 = (dateTimeNow5.Date == myStartDate5.Date) && (dateTimeNow5.Hour == myStartDate5.Hour) && (dateTimeNow5.Minute == myStartDate5.Minute);
+                if (compare_start5)
+                {
+                    if (rb_dateTimeON5.Checked)
+                    {
+                        turn(ON_LED5);
+                        showImage(ON_LED5);
+                    }
+                    else
+                    {
+                        turn(OFF_LED5);
+                        showImage(OFF_LED5);
+                    }
+                    dateTime_start5 = true;
+                }
+            }
+            else
+            {
+                bool compare_stop5 = (dateTimeNow5.Date == myStopDate5.Date) && (dateTimeNow5.Hour == myStopDate5.Hour) && (dateTimeNow5.Minute == myStopDate5.Minute);
+                if (compare_stop5)
+                {
+                    if (rb_dateTimeON5.Checked)
+                    {
+                        turn(OFF_LED5);
+                        showImage(OFF_LED5);
+                    }
+                    else
+                    {
+                        turn(ON_LED5);
+                        showImage(ON_LED5);
+                    }
+                    timer_dateTime5.Stop();
+                    dateTimeSelectionControls(ON_LED5, true);
+                    dateTime_start5 = false;
+                }
+            }
+        }
+
+        private void btn_dateTime_Reset5_Click(object sender, EventArgs e)
+        {
+            timer_dateTime5.Stop();
+            dateTimeSelectionControls(ON_LED5, true);
+            turn(OFF_LED5);
+            showImage(OFF_LED5);
+            dateTime_start5 = false;
+        }
+
         // all LED functions
         // basic controls
         private void btn_ON_allLED_Click(object sender, EventArgs e)
@@ -858,6 +928,67 @@ namespace LightsControlSystemFiveLED
             timer_countdown_allLED.Stop();
             countdown_seconds_allLED = 0;
             lbl_countdownSeconds_allLED.Text = countdown_seconds_allLED.ToString();
+        }
+
+        // date and time control
+        private void btn_dateTime_Set_allLED_Click(object sender, EventArgs e)
+        {
+            myStartDate_allLED = dtp_dateTime_startDate_allLED.Value.Date + dtp_dateTime_startTime_allLED.Value.TimeOfDay;
+            myStopDate_allLED = dtp_dateTime_stopDate_allLED.Value.Date + dtp_dateTime_stopTime_allLED.Value.TimeOfDay;
+            dateTimeSelectionControls(ON_allLED, false);
+            timer_dateTime_allLED.Start();
+        }
+
+        private void timer_dateTime_allLED_Tick(object sender, EventArgs e)
+        {
+            DateTime dateTimeNow_allLED = DateTime.Now;
+            if (!dateTime_start_allLED)
+            {
+                bool compare_start_allLED = (dateTimeNow_allLED.Date == myStartDate_allLED.Date) && (dateTimeNow_allLED.Hour == myStartDate_allLED.Hour) && (dateTimeNow_allLED.Minute == myStartDate_allLED.Minute);
+                if (compare_start_allLED)
+                {
+                    if (rb_dateTimeON_allLED.Checked)
+                    {
+                        turn(ON_allLED);
+                        showImage(ON_allLED);
+                    }
+                    else
+                    {
+                        turn(OFF_allLED);
+                        showImage(OFF_allLED);
+                    }
+                    dateTime_start_allLED = true;
+                }
+            }
+            else
+            {
+                bool compare_stop_allLED = (dateTimeNow_allLED.Date == myStopDate_allLED.Date) && (dateTimeNow_allLED.Hour == myStopDate_allLED.Hour) && (dateTimeNow_allLED.Minute == myStopDate_allLED.Minute);
+                if (compare_stop_allLED)
+                {
+                    if (rb_dateTimeON_allLED.Checked)
+                    {
+                        turn(OFF_allLED);
+                        showImage(OFF_allLED);
+                    }
+                    else
+                    {
+                        turn(ON_allLED);
+                        showImage(ON_allLED);
+                    }
+                    timer_dateTime_allLED.Stop();
+                    dateTimeSelectionControls(ON_allLED, true);
+                    dateTime_start_allLED = false;
+                }
+            }
+        }
+
+        private void btn_dateTime_Reset_allLED_Click(object sender, EventArgs e)
+        {
+            timer_dateTime_allLED.Stop();
+            dateTimeSelectionControls(ON_allLED, true);
+            turn(OFF_allLED);
+            showImage(OFF_allLED);
+            dateTime_start_allLED = false;
         }
     }
 }
