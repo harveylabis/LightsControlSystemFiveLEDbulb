@@ -70,6 +70,7 @@ namespace LightsControlSystemFiveLED
         public Form1()
         {
             InitializeComponent();
+            timer_running.Start();
             getAvailableCOMPorts();
             controlAllGroupBox(false);
 
@@ -269,6 +270,12 @@ namespace LightsControlSystemFiveLED
             grpBox_switch_allLED.Enabled = state;
             grpBox_countdownTimer_allLED.Enabled = state;
             grpBox_dateTimeControl_allLED.Enabled = state;
+        }
+
+        private void timer_running_Tick(object sender, EventArgs e)
+        {
+            lbl_dateRunning.Text = DateTime.Now.ToLongDateString();
+            lbl_timeRunning.Text = DateTime.Now.ToLongTimeString();
         }
 
         // LED 1 functions

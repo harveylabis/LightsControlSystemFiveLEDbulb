@@ -195,6 +195,9 @@
             this.dtp_dateTime_startTime_allLED = new System.Windows.Forms.DateTimePicker();
             this.dtp_dateTime_startDate_allLED = new System.Windows.Forms.DateTimePicker();
             this.rb_dateTimeON_allLED = new System.Windows.Forms.RadioButton();
+            this.lbl_timeRunning = new System.Windows.Forms.Label();
+            this.lbl_dateRunning = new System.Windows.Forms.Label();
+            this.timer_running = new System.Windows.Forms.Timer(this.components);
             this.gpb_portControl.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_LED1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_ON_LED1)).BeginInit();
@@ -245,7 +248,7 @@
             this.lbl_title.AutoSize = true;
             this.lbl_title.Font = new System.Drawing.Font("Tw Cen MT", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_title.Location = new System.Drawing.Point(58, 28);
+            this.lbl_title.Location = new System.Drawing.Point(111, 28);
             this.lbl_title.Name = "lbl_title";
             this.lbl_title.Size = new System.Drawing.Size(480, 47);
             this.lbl_title.TabIndex = 0;
@@ -255,7 +258,7 @@
             // 
             this.gpb_portControl.Controls.Add(this.cbx_portCOMBox);
             this.gpb_portControl.Controls.Add(this.btn_portConnect);
-            this.gpb_portControl.Location = new System.Drawing.Point(598, 20);
+            this.gpb_portControl.Location = new System.Drawing.Point(637, 20);
             this.gpb_portControl.Name = "gpb_portControl";
             this.gpb_portControl.Size = new System.Drawing.Size(253, 55);
             this.gpb_portControl.TabIndex = 1;
@@ -2010,11 +2013,41 @@
             this.rb_dateTimeON_allLED.Text = "ON";
             this.rb_dateTimeON_allLED.UseVisualStyleBackColor = true;
             // 
+            // lbl_timeRunning
+            // 
+            this.lbl_timeRunning.AutoSize = true;
+            this.lbl_timeRunning.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_timeRunning.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_timeRunning.Location = new System.Drawing.Point(933, 51);
+            this.lbl_timeRunning.Name = "lbl_timeRunning";
+            this.lbl_timeRunning.Size = new System.Drawing.Size(53, 24);
+            this.lbl_timeRunning.TabIndex = 41;
+            this.lbl_timeRunning.Text = "Time";
+            // 
+            // lbl_dateRunning
+            // 
+            this.lbl_dateRunning.AutoSize = true;
+            this.lbl_dateRunning.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_dateRunning.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lbl_dateRunning.Location = new System.Drawing.Point(932, 23);
+            this.lbl_dateRunning.Name = "lbl_dateRunning";
+            this.lbl_dateRunning.Size = new System.Drawing.Size(48, 24);
+            this.lbl_dateRunning.TabIndex = 42;
+            this.lbl_dateRunning.Text = "Date";
+            // 
+            // timer_running
+            // 
+            this.timer_running.Enabled = true;
+            this.timer_running.Interval = 1000;
+            this.timer_running.Tick += new System.EventHandler(this.timer_running_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1202, 667);
+            this.Controls.Add(this.lbl_dateRunning);
+            this.Controls.Add(this.lbl_timeRunning);
             this.Controls.Add(this.grpBox_dateTimeControl_allLED);
             this.Controls.Add(this.grpBox_dateTimeControl5);
             this.Controls.Add(this.grpBox_dateTimeControl4);
@@ -2286,6 +2319,9 @@
         private System.Windows.Forms.DateTimePicker dtp_dateTime_startTime_allLED;
         private System.Windows.Forms.DateTimePicker dtp_dateTime_startDate_allLED;
         private System.Windows.Forms.RadioButton rb_dateTimeON_allLED;
+        private System.Windows.Forms.Label lbl_timeRunning;
+        private System.Windows.Forms.Label lbl_dateRunning;
+        private System.Windows.Forms.Timer timer_running;
     }
 }
 
