@@ -14,6 +14,7 @@ namespace LightsControlSystemFiveLED
     public partial class Form1 : Form
     {
         // global variables
+        public static bool correctPassword = false;
         bool isConnected = false;
         String[] ports;
         SerialPort port;
@@ -112,6 +113,7 @@ namespace LightsControlSystemFiveLED
         private void disconnect()
         {
             isConnected = false;
+            correctPassword = false;
             port.Close();
             btn_portConnect.Text = "Connect";
         }
@@ -121,7 +123,13 @@ namespace LightsControlSystemFiveLED
             if (!isConnected)
             {
                 connect();
-                controlAllGroupBox(true);
+                Form2 x = new Form2();
+                x.ShowDialog();
+                if (correctPassword)
+                {
+                    controlAllGroupBox(true);
+                }
+                
             } else
             {
                 disconnect();
