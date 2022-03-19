@@ -33,18 +33,6 @@
             this.gpb_portControl = new System.Windows.Forms.GroupBox();
             this.cbx_portCOMBox = new System.Windows.Forms.ComboBox();
             this.btn_portConnect = new System.Windows.Forms.Button();
-            this.pic_OFF_LED1 = new System.Windows.Forms.PictureBox();
-            this.pic_ON_LED1 = new System.Windows.Forms.PictureBox();
-            this.pic_OFF_LED2 = new System.Windows.Forms.PictureBox();
-            this.pic_ON_LED2 = new System.Windows.Forms.PictureBox();
-            this.pic_OFF_LED3 = new System.Windows.Forms.PictureBox();
-            this.pic_ON_LED3 = new System.Windows.Forms.PictureBox();
-            this.pic_OFF_LED4 = new System.Windows.Forms.PictureBox();
-            this.pic_ON_LED4 = new System.Windows.Forms.PictureBox();
-            this.pic_OFF_LED5 = new System.Windows.Forms.PictureBox();
-            this.pic_ON_LED5 = new System.Windows.Forms.PictureBox();
-            this.pic_OFF_allLED = new System.Windows.Forms.PictureBox();
-            this.pic_ON_allLED = new System.Windows.Forms.PictureBox();
             this.lbl_allLED = new System.Windows.Forms.Label();
             this.lbl_LED1 = new System.Windows.Forms.Label();
             this.lbl_LED2 = new System.Windows.Forms.Label();
@@ -198,19 +186,20 @@
             this.lbl_timeRunning = new System.Windows.Forms.Label();
             this.lbl_dateRunning = new System.Windows.Forms.Label();
             this.timer_running = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pic_OFF_LED1 = new System.Windows.Forms.PictureBox();
+            this.pic_ON_LED1 = new System.Windows.Forms.PictureBox();
+            this.pic_OFF_LED2 = new System.Windows.Forms.PictureBox();
+            this.pic_ON_LED2 = new System.Windows.Forms.PictureBox();
+            this.pic_OFF_LED3 = new System.Windows.Forms.PictureBox();
+            this.pic_OFF_LED4 = new System.Windows.Forms.PictureBox();
+            this.pic_ON_LED3 = new System.Windows.Forms.PictureBox();
+            this.pic_ON_LED4 = new System.Windows.Forms.PictureBox();
+            this.pic_OFF_LED5 = new System.Windows.Forms.PictureBox();
+            this.pic_ON_LED5 = new System.Windows.Forms.PictureBox();
+            this.pic_OFF_allLED = new System.Windows.Forms.PictureBox();
+            this.pic_ON_allLED = new System.Windows.Forms.PictureBox();
             this.gpb_portControl.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_LED1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_ON_LED1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_LED2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_ON_LED2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_LED3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_ON_LED3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_LED4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_ON_LED4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_LED5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_ON_LED5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_allLED)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_ON_allLED)).BeginInit();
             this.grpBox_switchLED1.SuspendLayout();
             this.grpBox_switchLED2.SuspendLayout();
             this.grpBox_switchLED4.SuspendLayout();
@@ -241,6 +230,19 @@
             this.grpBox_dateTimeControl_allLED.SuspendLayout();
             this.grpBox_dateTimeStop_allLED.SuspendLayout();
             this.grpBox_dateTimeStart_allLED.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_LED1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_ON_LED1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_LED2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_ON_LED2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_LED3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_LED4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_ON_LED3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_ON_LED4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_LED5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_ON_LED5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_allLED)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_ON_allLED)).BeginInit();
             this.SuspendLayout();
             // 
             // lbl_title
@@ -248,7 +250,7 @@
             this.lbl_title.AutoSize = true;
             this.lbl_title.Font = new System.Drawing.Font("Tw Cen MT", 30F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_title.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lbl_title.Location = new System.Drawing.Point(111, 28);
+            this.lbl_title.Location = new System.Drawing.Point(111, 23);
             this.lbl_title.Name = "lbl_title";
             this.lbl_title.Size = new System.Drawing.Size(480, 47);
             this.lbl_title.TabIndex = 0;
@@ -284,126 +286,6 @@
             this.btn_portConnect.Text = "Connect";
             this.btn_portConnect.UseVisualStyleBackColor = true;
             this.btn_portConnect.Click += new System.EventHandler(this.btn_portConnect_Click);
-            // 
-            // pic_OFF_LED1
-            // 
-            this.pic_OFF_LED1.Image = global::LightsControlSystemFiveLED.Properties.Resources.off;
-            this.pic_OFF_LED1.Location = new System.Drawing.Point(49, 90);
-            this.pic_OFF_LED1.Name = "pic_OFF_LED1";
-            this.pic_OFF_LED1.Size = new System.Drawing.Size(100, 89);
-            this.pic_OFF_LED1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_OFF_LED1.TabIndex = 3;
-            this.pic_OFF_LED1.TabStop = false;
-            // 
-            // pic_ON_LED1
-            // 
-            this.pic_ON_LED1.Image = global::LightsControlSystemFiveLED.Properties.Resources.on;
-            this.pic_ON_LED1.Location = new System.Drawing.Point(49, 90);
-            this.pic_ON_LED1.Name = "pic_ON_LED1";
-            this.pic_ON_LED1.Size = new System.Drawing.Size(100, 89);
-            this.pic_ON_LED1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_ON_LED1.TabIndex = 2;
-            this.pic_ON_LED1.TabStop = false;
-            // 
-            // pic_OFF_LED2
-            // 
-            this.pic_OFF_LED2.Image = global::LightsControlSystemFiveLED.Properties.Resources.off;
-            this.pic_OFF_LED2.Location = new System.Drawing.Point(245, 90);
-            this.pic_OFF_LED2.Name = "pic_OFF_LED2";
-            this.pic_OFF_LED2.Size = new System.Drawing.Size(100, 89);
-            this.pic_OFF_LED2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_OFF_LED2.TabIndex = 5;
-            this.pic_OFF_LED2.TabStop = false;
-            // 
-            // pic_ON_LED2
-            // 
-            this.pic_ON_LED2.Image = global::LightsControlSystemFiveLED.Properties.Resources.on;
-            this.pic_ON_LED2.Location = new System.Drawing.Point(245, 90);
-            this.pic_ON_LED2.Name = "pic_ON_LED2";
-            this.pic_ON_LED2.Size = new System.Drawing.Size(100, 89);
-            this.pic_ON_LED2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_ON_LED2.TabIndex = 4;
-            this.pic_ON_LED2.TabStop = false;
-            // 
-            // pic_OFF_LED3
-            // 
-            this.pic_OFF_LED3.Image = global::LightsControlSystemFiveLED.Properties.Resources.off;
-            this.pic_OFF_LED3.Location = new System.Drawing.Point(451, 90);
-            this.pic_OFF_LED3.Name = "pic_OFF_LED3";
-            this.pic_OFF_LED3.Size = new System.Drawing.Size(100, 89);
-            this.pic_OFF_LED3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_OFF_LED3.TabIndex = 7;
-            this.pic_OFF_LED3.TabStop = false;
-            // 
-            // pic_ON_LED3
-            // 
-            this.pic_ON_LED3.Image = global::LightsControlSystemFiveLED.Properties.Resources.on;
-            this.pic_ON_LED3.Location = new System.Drawing.Point(451, 90);
-            this.pic_ON_LED3.Name = "pic_ON_LED3";
-            this.pic_ON_LED3.Size = new System.Drawing.Size(100, 89);
-            this.pic_ON_LED3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_ON_LED3.TabIndex = 6;
-            this.pic_ON_LED3.TabStop = false;
-            // 
-            // pic_OFF_LED4
-            // 
-            this.pic_OFF_LED4.Image = global::LightsControlSystemFiveLED.Properties.Resources.off;
-            this.pic_OFF_LED4.Location = new System.Drawing.Point(649, 90);
-            this.pic_OFF_LED4.Name = "pic_OFF_LED4";
-            this.pic_OFF_LED4.Size = new System.Drawing.Size(100, 89);
-            this.pic_OFF_LED4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_OFF_LED4.TabIndex = 9;
-            this.pic_OFF_LED4.TabStop = false;
-            // 
-            // pic_ON_LED4
-            // 
-            this.pic_ON_LED4.Image = global::LightsControlSystemFiveLED.Properties.Resources.on;
-            this.pic_ON_LED4.Location = new System.Drawing.Point(649, 90);
-            this.pic_ON_LED4.Name = "pic_ON_LED4";
-            this.pic_ON_LED4.Size = new System.Drawing.Size(100, 89);
-            this.pic_ON_LED4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_ON_LED4.TabIndex = 8;
-            this.pic_ON_LED4.TabStop = false;
-            // 
-            // pic_OFF_LED5
-            // 
-            this.pic_OFF_LED5.Image = global::LightsControlSystemFiveLED.Properties.Resources.off;
-            this.pic_OFF_LED5.Location = new System.Drawing.Point(855, 90);
-            this.pic_OFF_LED5.Name = "pic_OFF_LED5";
-            this.pic_OFF_LED5.Size = new System.Drawing.Size(100, 89);
-            this.pic_OFF_LED5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_OFF_LED5.TabIndex = 11;
-            this.pic_OFF_LED5.TabStop = false;
-            // 
-            // pic_ON_LED5
-            // 
-            this.pic_ON_LED5.Image = global::LightsControlSystemFiveLED.Properties.Resources.on;
-            this.pic_ON_LED5.Location = new System.Drawing.Point(855, 90);
-            this.pic_ON_LED5.Name = "pic_ON_LED5";
-            this.pic_ON_LED5.Size = new System.Drawing.Size(100, 89);
-            this.pic_ON_LED5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_ON_LED5.TabIndex = 10;
-            this.pic_ON_LED5.TabStop = false;
-            // 
-            // pic_OFF_allLED
-            // 
-            this.pic_OFF_allLED.Image = global::LightsControlSystemFiveLED.Properties.Resources.off;
-            this.pic_OFF_allLED.Location = new System.Drawing.Point(1049, 90);
-            this.pic_OFF_allLED.Name = "pic_OFF_allLED";
-            this.pic_OFF_allLED.Size = new System.Drawing.Size(100, 89);
-            this.pic_OFF_allLED.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_OFF_allLED.TabIndex = 13;
-            this.pic_OFF_allLED.TabStop = false;
-            // 
-            // pic_ON_allLED
-            // 
-            this.pic_ON_allLED.Image = global::LightsControlSystemFiveLED.Properties.Resources.on;
-            this.pic_ON_allLED.Location = new System.Drawing.Point(1049, 90);
-            this.pic_ON_allLED.Name = "pic_ON_allLED";
-            this.pic_ON_allLED.Size = new System.Drawing.Size(100, 89);
-            this.pic_ON_allLED.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_ON_allLED.TabIndex = 12;
-            this.pic_ON_allLED.TabStop = false;
             // 
             // lbl_allLED
             // 
@@ -900,6 +782,7 @@
             this.txtbox_countdownTime3.Name = "txtbox_countdownTime3";
             this.txtbox_countdownTime3.Size = new System.Drawing.Size(50, 20);
             this.txtbox_countdownTime3.TabIndex = 5;
+            this.txtbox_countdownTime3.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtbox_countdownTime3_KeyDown);
             // 
             // btn_countdownReset3
             // 
@@ -1003,6 +886,7 @@
             this.txtbox_countdownTime_allLED.Name = "txtbox_countdownTime_allLED";
             this.txtbox_countdownTime_allLED.Size = new System.Drawing.Size(50, 20);
             this.txtbox_countdownTime_allLED.TabIndex = 5;
+            this.txtbox_countdownTime_allLED.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtbox_countdownTime_allLED_KeyDown);
             // 
             // btn_countdownReset_allLED
             // 
@@ -1096,6 +980,7 @@
             this.txtbox_countdownTime5.Name = "txtbox_countdownTime5";
             this.txtbox_countdownTime5.Size = new System.Drawing.Size(50, 20);
             this.txtbox_countdownTime5.TabIndex = 5;
+            this.txtbox_countdownTime5.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtbox_countdownTime5_KeyDown);
             // 
             // btn_countdownReset5
             // 
@@ -1189,6 +1074,7 @@
             this.txtbox_countdownTime4.Name = "txtbox_countdownTime4";
             this.txtbox_countdownTime4.Size = new System.Drawing.Size(50, 20);
             this.txtbox_countdownTime4.TabIndex = 5;
+            this.txtbox_countdownTime4.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtbox_countdownTime4_KeyDown);
             // 
             // btn_countdownReset4
             // 
@@ -2043,11 +1929,142 @@
             this.timer_running.Interval = 1000;
             this.timer_running.Tick += new System.EventHandler(this.timer_running_Tick);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::LightsControlSystemFiveLED.Properties.Resources.ece108_lab1_logo;
+            this.pictureBox1.Location = new System.Drawing.Point(49, 16);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(56, 59);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 43;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pic_OFF_LED1
+            // 
+            this.pic_OFF_LED1.Image = global::LightsControlSystemFiveLED.Properties.Resources.off;
+            this.pic_OFF_LED1.Location = new System.Drawing.Point(49, 90);
+            this.pic_OFF_LED1.Name = "pic_OFF_LED1";
+            this.pic_OFF_LED1.Size = new System.Drawing.Size(100, 89);
+            this.pic_OFF_LED1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_OFF_LED1.TabIndex = 3;
+            this.pic_OFF_LED1.TabStop = false;
+            // 
+            // pic_ON_LED1
+            // 
+            this.pic_ON_LED1.Image = global::LightsControlSystemFiveLED.Properties.Resources.on;
+            this.pic_ON_LED1.Location = new System.Drawing.Point(49, 90);
+            this.pic_ON_LED1.Name = "pic_ON_LED1";
+            this.pic_ON_LED1.Size = new System.Drawing.Size(100, 89);
+            this.pic_ON_LED1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_ON_LED1.TabIndex = 2;
+            this.pic_ON_LED1.TabStop = false;
+            // 
+            // pic_OFF_LED2
+            // 
+            this.pic_OFF_LED2.Image = global::LightsControlSystemFiveLED.Properties.Resources.off;
+            this.pic_OFF_LED2.Location = new System.Drawing.Point(245, 90);
+            this.pic_OFF_LED2.Name = "pic_OFF_LED2";
+            this.pic_OFF_LED2.Size = new System.Drawing.Size(100, 89);
+            this.pic_OFF_LED2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_OFF_LED2.TabIndex = 5;
+            this.pic_OFF_LED2.TabStop = false;
+            // 
+            // pic_ON_LED2
+            // 
+            this.pic_ON_LED2.Image = global::LightsControlSystemFiveLED.Properties.Resources.on;
+            this.pic_ON_LED2.Location = new System.Drawing.Point(245, 90);
+            this.pic_ON_LED2.Name = "pic_ON_LED2";
+            this.pic_ON_LED2.Size = new System.Drawing.Size(100, 89);
+            this.pic_ON_LED2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_ON_LED2.TabIndex = 4;
+            this.pic_ON_LED2.TabStop = false;
+            // 
+            // pic_OFF_LED3
+            // 
+            this.pic_OFF_LED3.Image = global::LightsControlSystemFiveLED.Properties.Resources.off;
+            this.pic_OFF_LED3.Location = new System.Drawing.Point(451, 90);
+            this.pic_OFF_LED3.Name = "pic_OFF_LED3";
+            this.pic_OFF_LED3.Size = new System.Drawing.Size(100, 89);
+            this.pic_OFF_LED3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_OFF_LED3.TabIndex = 7;
+            this.pic_OFF_LED3.TabStop = false;
+            // 
+            // pic_OFF_LED4
+            // 
+            this.pic_OFF_LED4.Image = global::LightsControlSystemFiveLED.Properties.Resources.off;
+            this.pic_OFF_LED4.Location = new System.Drawing.Point(649, 90);
+            this.pic_OFF_LED4.Name = "pic_OFF_LED4";
+            this.pic_OFF_LED4.Size = new System.Drawing.Size(100, 89);
+            this.pic_OFF_LED4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_OFF_LED4.TabIndex = 9;
+            this.pic_OFF_LED4.TabStop = false;
+            // 
+            // pic_ON_LED3
+            // 
+            this.pic_ON_LED3.Image = global::LightsControlSystemFiveLED.Properties.Resources.on;
+            this.pic_ON_LED3.Location = new System.Drawing.Point(451, 90);
+            this.pic_ON_LED3.Name = "pic_ON_LED3";
+            this.pic_ON_LED3.Size = new System.Drawing.Size(100, 89);
+            this.pic_ON_LED3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_ON_LED3.TabIndex = 6;
+            this.pic_ON_LED3.TabStop = false;
+            // 
+            // pic_ON_LED4
+            // 
+            this.pic_ON_LED4.Image = global::LightsControlSystemFiveLED.Properties.Resources.on;
+            this.pic_ON_LED4.Location = new System.Drawing.Point(649, 90);
+            this.pic_ON_LED4.Name = "pic_ON_LED4";
+            this.pic_ON_LED4.Size = new System.Drawing.Size(100, 89);
+            this.pic_ON_LED4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_ON_LED4.TabIndex = 8;
+            this.pic_ON_LED4.TabStop = false;
+            // 
+            // pic_OFF_LED5
+            // 
+            this.pic_OFF_LED5.Image = global::LightsControlSystemFiveLED.Properties.Resources.off;
+            this.pic_OFF_LED5.Location = new System.Drawing.Point(855, 90);
+            this.pic_OFF_LED5.Name = "pic_OFF_LED5";
+            this.pic_OFF_LED5.Size = new System.Drawing.Size(100, 89);
+            this.pic_OFF_LED5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_OFF_LED5.TabIndex = 11;
+            this.pic_OFF_LED5.TabStop = false;
+            // 
+            // pic_ON_LED5
+            // 
+            this.pic_ON_LED5.Image = global::LightsControlSystemFiveLED.Properties.Resources.on;
+            this.pic_ON_LED5.Location = new System.Drawing.Point(855, 90);
+            this.pic_ON_LED5.Name = "pic_ON_LED5";
+            this.pic_ON_LED5.Size = new System.Drawing.Size(100, 89);
+            this.pic_ON_LED5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_ON_LED5.TabIndex = 10;
+            this.pic_ON_LED5.TabStop = false;
+            // 
+            // pic_OFF_allLED
+            // 
+            this.pic_OFF_allLED.Image = global::LightsControlSystemFiveLED.Properties.Resources.off;
+            this.pic_OFF_allLED.Location = new System.Drawing.Point(1049, 90);
+            this.pic_OFF_allLED.Name = "pic_OFF_allLED";
+            this.pic_OFF_allLED.Size = new System.Drawing.Size(100, 89);
+            this.pic_OFF_allLED.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_OFF_allLED.TabIndex = 13;
+            this.pic_OFF_allLED.TabStop = false;
+            // 
+            // pic_ON_allLED
+            // 
+            this.pic_ON_allLED.Image = global::LightsControlSystemFiveLED.Properties.Resources.on;
+            this.pic_ON_allLED.Location = new System.Drawing.Point(1049, 90);
+            this.pic_ON_allLED.Name = "pic_ON_allLED";
+            this.pic_ON_allLED.Size = new System.Drawing.Size(100, 89);
+            this.pic_ON_allLED.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_ON_allLED.TabIndex = 12;
+            this.pic_ON_allLED.TabStop = false;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1202, 667);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lbl_dateRunning);
             this.Controls.Add(this.lbl_timeRunning);
             this.Controls.Add(this.grpBox_dateTimeControl_allLED);
@@ -2094,18 +2111,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Lighting Control System";
             this.gpb_portControl.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_LED1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_ON_LED1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_LED2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_ON_LED2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_LED3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_ON_LED3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_LED4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_ON_LED4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_LED5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_ON_LED5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_allLED)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_ON_allLED)).EndInit();
             this.grpBox_switchLED1.ResumeLayout(false);
             this.grpBox_switchLED2.ResumeLayout(false);
             this.grpBox_switchLED4.ResumeLayout(false);
@@ -2148,6 +2153,19 @@
             this.grpBox_dateTimeControl_allLED.PerformLayout();
             this.grpBox_dateTimeStop_allLED.ResumeLayout(false);
             this.grpBox_dateTimeStart_allLED.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_LED1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_ON_LED1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_LED2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_ON_LED2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_LED3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_LED4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_ON_LED3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_ON_LED4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_LED5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_ON_LED5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_OFF_allLED)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_ON_allLED)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2324,6 +2342,7 @@
         private System.Windows.Forms.Label lbl_timeRunning;
         private System.Windows.Forms.Label lbl_dateRunning;
         private System.Windows.Forms.Timer timer_running;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

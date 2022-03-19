@@ -461,7 +461,7 @@ namespace LightsControlSystemFiveLED
                 MessageBox.Show(ex.Message);
             }
 
-            if (rb_countdownON2.Checked)
+            if (rb_countdownON2.Checked && countdown_seconds2 != 0)
             {
                 txtbox_countdownTime2.Enabled = false;
                 timer_countdown2.Start();
@@ -469,7 +469,7 @@ namespace LightsControlSystemFiveLED
                 showImage(ON_LED2);
                 lbl_countdownSeconds2.Text = countdown_seconds2.ToString();
             }
-            else if (rb_countdownOFF2.Checked)
+            else if (rb_countdownOFF2.Checked && countdown_seconds2 != 0)
             {
                 txtbox_countdownTime2.Enabled = false;
                 timer_countdown2.Start();
@@ -615,20 +615,30 @@ namespace LightsControlSystemFiveLED
         // countdown timer control
         private void btn_countdownStart3_Click(object sender, EventArgs e)
         {
-            countdown_seconds3 = Convert.ToInt32(txtbox_countdownTime3.Text);
-            txtbox_countdownTime3.Enabled = false;
-            timer_countdown3.Start();
-            if (rb_countdownON3.Checked)
+            try
             {
+                countdown_seconds3 = Convert.ToInt32(txtbox_countdownTime3.Text);
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+            if (rb_countdownON3.Checked && countdown_seconds3 != 0)
+            {
+                txtbox_countdownTime3.Enabled = false;
+                timer_countdown3.Start();
                 turn(ON_LED3);
                 showImage(ON_LED3);
+                lbl_countdownSeconds3.Text = countdown_seconds3.ToString();
             }
-            else
+            else if (rb_countdownOFF3.Checked && countdown_seconds3 != 0)
             {
+                txtbox_countdownTime3.Enabled = false;
+                timer_countdown3.Start();
                 turn(OFF_LED3);
                 showImage(OFF_LED3);
+                lbl_countdownSeconds3.Text = countdown_seconds3.ToString();
             }
-            lbl_countdownSeconds3.Text = countdown_seconds3.ToString();
         }
 
         private void timer_countdown3_Tick(object sender, EventArgs e)
@@ -641,8 +651,8 @@ namespace LightsControlSystemFiveLED
                     turn(OFF_LED3);
                     showImage(OFF_LED3);
                 }
-                else
-                {
+                else if (rb_countdownOFF3.Checked)
+                { 
                     turn(ON_LED3);
                     showImage(ON_LED3);
                 }
@@ -655,11 +665,29 @@ namespace LightsControlSystemFiveLED
         private void btn_countdownReset3_Click(object sender, EventArgs e)
         {
             txtbox_countdownTime3.Enabled = true;
-            turn(OFF_LED3);
-            showImage(OFF_LED3);
+            if (rb_countdownON3.Checked)
+            {
+                turn(OFF_LED3);
+                showImage(OFF_LED3);
+            } else if (rb_countdownOFF3.Checked)
+            {
+                turn(ON_LED3);
+                showImage(ON_LED3);
+            }
             timer_countdown3.Stop();
             countdown_seconds3 = 0;
             lbl_countdownSeconds3.Text = countdown_seconds3.ToString();
+        }
+
+        // Countdown enter key handler
+        private void txtbox_countdownTime3_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Return))
+            {
+                btn_countdownStart3.PerformClick();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
         }
 
         // date and time control
@@ -684,7 +712,7 @@ namespace LightsControlSystemFiveLED
                         turn(ON_LED3);
                         showImage(ON_LED3);
                     }
-                    else
+                    else if (rb_dateTimeOFF3.Checked)
                     {
                         turn(OFF_LED3);
                         showImage(OFF_LED3);
@@ -702,7 +730,7 @@ namespace LightsControlSystemFiveLED
                         turn(OFF_LED3);
                         showImage(OFF_LED3);
                     }
-                    else
+                    else if (rb_dateTimeOFF2.Checked)
                     {
                         turn(ON_LED3);
                         showImage(ON_LED3);
@@ -718,8 +746,16 @@ namespace LightsControlSystemFiveLED
         {
             timer_dateTime3.Stop();
             dateTimeSelectionControls(ON_LED3, true);
-            turn(OFF_LED3);
-            showImage(OFF_LED3);
+            if (rb_dateTimeON3.Checked)
+            {
+                turn(OFF_LED3);
+                showImage(OFF_LED3);
+            }
+            else if (rb_dateTimeOFF3.Checked) {
+                turn(ON_LED3);
+                showImage(ON_LED3);
+            }
+            
             dateTime_start3 = false;
         }
 
@@ -740,20 +776,31 @@ namespace LightsControlSystemFiveLED
         // countdown timer control
         private void btn_countdownStart4_Click(object sender, EventArgs e)
         {
-            countdown_seconds4 = Convert.ToInt32(txtbox_countdownTime4.Text);
-            txtbox_countdownTime4.Enabled = false;
-            timer_countdown4.Start();
-            if (rb_countdownON4.Checked)
+            try
             {
+                countdown_seconds4 = Convert.ToInt32(txtbox_countdownTime4.Text);
+            } catch ( Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+            if (rb_countdownON4.Checked && countdown_seconds4 != 0)
+            {
+                txtbox_countdownTime4.Enabled = false;
+                timer_countdown4.Start();
                 turn(ON_LED4);
                 showImage(ON_LED4);
+                lbl_countdownSeconds4.Text = countdown_seconds4.ToString();
             }
-            else
+            else if (rb_countdownOFF4.Checked && countdown_seconds4 != 0)
             {
+                txtbox_countdownTime4.Enabled = false;
+                timer_countdown4.Start();
                 turn(OFF_LED4);
                 showImage(OFF_LED4);
+                lbl_countdownSeconds4.Text = countdown_seconds4.ToString();
             }
-            lbl_countdownSeconds4.Text = countdown_seconds4.ToString();
+            
         }
 
         private void timer_countdown4_Tick(object sender, EventArgs e)
@@ -766,7 +813,7 @@ namespace LightsControlSystemFiveLED
                     turn(OFF_LED4);
                     showImage(OFF_LED4);
                 }
-                else
+                else if (rb_countdownOFF4.Checked)
                 {
                     turn(ON_LED4);
                     showImage(ON_LED4);
@@ -780,11 +827,30 @@ namespace LightsControlSystemFiveLED
         private void btn_countdownReset4_Click(object sender, EventArgs e)
         {
             txtbox_countdownTime4.Enabled = true;
-            turn(OFF_LED4);
-            showImage(OFF_LED4);
+            if (rb_countdownON4.Checked)
+            {
+                turn(OFF_LED4);
+                showImage(OFF_LED4);
+            } else if (rb_countdownOFF4.Checked)
+            {
+                turn(ON_LED4);
+                showImage(ON_LED4);
+            }
+            
             timer_countdown4.Stop();
             countdown_seconds4 = 0;
             lbl_countdownSeconds4.Text = countdown_seconds4.ToString();
+        }
+
+        // Countdown enter key handler
+        private void txtbox_countdownTime4_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Return))
+            {
+                btn_countdownStart4.PerformClick();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
         }
 
         // date and time control
@@ -809,7 +875,7 @@ namespace LightsControlSystemFiveLED
                         turn(ON_LED4);
                         showImage(ON_LED4);
                     }
-                    else
+                    else if (rb_dateTimeOFF4.Checked)
                     {
                         turn(OFF_LED4);
                         showImage(OFF_LED4);
@@ -827,7 +893,7 @@ namespace LightsControlSystemFiveLED
                         turn(OFF_LED4);
                         showImage(OFF_LED4);
                     }
-                    else
+                    else if (rb_dateTimeOFF4.Checked)
                     {
                         turn(ON_LED4);
                         showImage(ON_LED4);
@@ -843,8 +909,16 @@ namespace LightsControlSystemFiveLED
         {
             timer_dateTime4.Stop();
             dateTimeSelectionControls(ON_LED4, true);
-            turn(OFF_LED4);
-            showImage(OFF_LED4);
+            if (rb_dateTimeON4.Checked)
+            {
+                turn(OFF_LED4);
+                showImage(OFF_LED4);
+            } else if (rb_dateTimeOFF4.Checked)
+            {
+                turn(ON_LED4);
+                showImage(ON_LED4);
+            }
+            
             dateTime_start4 = false;
         }
 
@@ -865,20 +939,30 @@ namespace LightsControlSystemFiveLED
         // countdown timer control
         private void btn_countdownStart5_Click(object sender, EventArgs e)
         {
-            countdown_seconds5 = Convert.ToInt32(txtbox_countdownTime5.Text);
-            txtbox_countdownTime5.Enabled = false;
-            timer_countdown5.Start();
-            if (rb_countdownON5.Checked)
+            try
             {
+                countdown_seconds5 = Convert.ToInt32(txtbox_countdownTime5.Text);
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+            if (rb_countdownON5.Checked && countdown_seconds5 != 0)
+            {
+                txtbox_countdownTime5.Enabled = false;
+                timer_countdown5.Start();
                 turn(ON_LED5);
                 showImage(ON_LED5);
+                lbl_countdownSeconds5.Text = countdown_seconds5.ToString();
             }
-            else
+            else if (rb_countdownOFF5.Checked && countdown_seconds5 != 0)
             {
+                txtbox_countdownTime5.Enabled = false;
+                timer_countdown5.Start();
                 turn(OFF_LED5);
                 showImage(OFF_LED5);
+                lbl_countdownSeconds5.Text = countdown_seconds5.ToString();
             }
-            lbl_countdownSeconds5.Text = countdown_seconds5.ToString();
         }
 
         private void timer_countdown5_Tick(object sender, EventArgs e)
@@ -891,7 +975,7 @@ namespace LightsControlSystemFiveLED
                     turn(OFF_LED5);
                     showImage(OFF_LED5);
                 }
-                else
+                else if (rb_countdownOFF5.Checked)
                 {
                     turn(ON_LED5);
                     showImage(ON_LED5);
@@ -905,11 +989,29 @@ namespace LightsControlSystemFiveLED
         private void btn_countdownReset5_Click(object sender, EventArgs e)
         {
             txtbox_countdownTime5.Enabled = true;
-            turn(OFF_LED5);
-            showImage(OFF_LED5);
+            if (rb_countdownON5.Checked)
+            {
+                turn(OFF_LED5);
+                showImage(OFF_LED5);
+            } else if (rb_countdownOFF5.Checked)
+            {
+                turn(ON_LED5);
+                showImage(ON_LED5);
+            }
+            
             timer_countdown5.Stop();
             countdown_seconds5 = 0;
             lbl_countdownSeconds5.Text = countdown_seconds5.ToString();
+        }
+
+        private void txtbox_countdownTime5_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Return))
+            {
+                btn_countdownStart5.PerformClick();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
         }
 
         // date and time control
@@ -934,7 +1036,7 @@ namespace LightsControlSystemFiveLED
                         turn(ON_LED5);
                         showImage(ON_LED5);
                     }
-                    else
+                    else if (rb_dateTimeOFF5.Checked)
                     {
                         turn(OFF_LED5);
                         showImage(OFF_LED5);
@@ -952,7 +1054,7 @@ namespace LightsControlSystemFiveLED
                         turn(OFF_LED5);
                         showImage(OFF_LED5);
                     }
-                    else
+                    else if (rb_dateTimeOFF5.Checked)
                     {
                         turn(ON_LED5);
                         showImage(ON_LED5);
@@ -968,8 +1070,16 @@ namespace LightsControlSystemFiveLED
         {
             timer_dateTime5.Stop();
             dateTimeSelectionControls(ON_LED5, true);
-            turn(OFF_LED5);
-            showImage(OFF_LED5);
+            if (rb_dateTimeON5.Checked)
+            {
+                turn(OFF_LED5);
+                showImage(OFF_LED5);
+            } else if (rb_dateTimeOFF5.Checked)
+            {
+                turn(ON_LED5);
+                showImage(ON_LED5);
+            }
+
             dateTime_start5 = false;
         }
 
@@ -991,20 +1101,30 @@ namespace LightsControlSystemFiveLED
         // countdown timer control
         private void btn_countdownStart_allLED_Click(object sender, EventArgs e)
         {
-            countdown_seconds_allLED = Convert.ToInt32(txtbox_countdownTime_allLED.Text);
-            txtbox_countdownTime_allLED.Enabled = false;
-            timer_countdown_allLED.Start();
-            if (rb_countdownON_allLED.Checked)
+            try
             {
+                countdown_seconds_allLED = Convert.ToInt32(txtbox_countdownTime_allLED.Text);
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+            if (rb_countdownON_allLED.Checked && countdown_seconds_allLED != 0)
+            {
+                txtbox_countdownTime_allLED.Enabled = false;
+                timer_countdown_allLED.Start();
                 turn(ON_allLED);
                 showImage(ON_allLED);
+                lbl_countdownSeconds_allLED.Text = countdown_seconds_allLED.ToString();
             }
-            else
+            else if (rb_countdownOFF_allLED.Checked && countdown_seconds_allLED != 0)
             {
+                txtbox_countdownTime_allLED.Enabled = false;
+                timer_countdown_allLED.Start();
                 turn(OFF_allLED);
                 showImage(OFF_allLED);
+                lbl_countdownSeconds_allLED.Text = countdown_seconds_allLED.ToString();
             }
-            lbl_countdownSeconds_allLED.Text = countdown_seconds_allLED.ToString();
         }
 
         private void timer_countdown_allLED_Tick(object sender, EventArgs e)
@@ -1017,7 +1137,7 @@ namespace LightsControlSystemFiveLED
                     turn(OFF_allLED);
                     showImage(OFF_allLED);
                 }
-                else
+                else if (rb_countdownOFF_allLED.Checked)
                 {
                     turn(ON_allLED);
                     showImage(ON_allLED);
@@ -1031,11 +1151,29 @@ namespace LightsControlSystemFiveLED
         private void btn_countdownReset_allLED_Click(object sender, EventArgs e)
         {
             txtbox_countdownTime_allLED.Enabled = true;
-            turn(OFF_allLED);
-            showImage(OFF_allLED);
+            if (rb_countdownON_allLED.Checked)
+            {
+                turn(OFF_allLED);
+                showImage(OFF_allLED);
+            } else if (rb_countdownOFF_allLED.Checked)
+            {
+                turn(ON_allLED);
+                showImage(ON_allLED);
+            }
+            
             timer_countdown_allLED.Stop();
             countdown_seconds_allLED = 0;
             lbl_countdownSeconds_allLED.Text = countdown_seconds_allLED.ToString();
+        }
+
+        private void txtbox_countdownTime_allLED_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Return))
+            {
+                btn_countdownStart_allLED.PerformClick();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
         }
 
         // date and time control
@@ -1060,7 +1198,7 @@ namespace LightsControlSystemFiveLED
                         turn(ON_allLED);
                         showImage(ON_allLED);
                     }
-                    else
+                    else if (rb_dateTimeOFF_allLED.Checked)
                     {
                         turn(OFF_allLED);
                         showImage(OFF_allLED);
@@ -1078,7 +1216,7 @@ namespace LightsControlSystemFiveLED
                         turn(OFF_allLED);
                         showImage(OFF_allLED);
                     }
-                    else
+                    else if (rb_dateTimeOFF_allLED.Checked)
                     {
                         turn(ON_allLED);
                         showImage(ON_allLED);
@@ -1094,8 +1232,16 @@ namespace LightsControlSystemFiveLED
         {
             timer_dateTime_allLED.Stop();
             dateTimeSelectionControls(ON_allLED, true);
-            turn(OFF_allLED);
-            showImage(OFF_allLED);
+            if (rb_dateTimeON_allLED.Checked)
+            {
+                turn(OFF_allLED);
+                showImage(OFF_allLED);
+            } else if (rb_dateTimeOFF_allLED.Checked)
+            {
+                turn(ON_allLED);
+                showImage(ON_allLED);
+            }
+            
             dateTime_start_allLED = false;
         }
     }
