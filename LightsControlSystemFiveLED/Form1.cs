@@ -295,19 +295,29 @@ namespace LightsControlSystemFiveLED
         // countdown timer control
         private void btn_countdownStart1_Click(object sender, EventArgs e)
         {
-            countdown_seconds1 = Convert.ToInt32(txtbox_countdownTime1.Text);
-            txtbox_countdownTime1.Enabled = false;
-            timer_countdown1.Start();
-            if (rb_countdownON1.Checked)
+            try
             {
+                countdown_seconds1 = Convert.ToInt32(txtbox_countdownTime1.Text);
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            
+            if (rb_countdownON1.Checked && countdown_seconds1 != 0)
+            {
+                txtbox_countdownTime1.Enabled = false;
+                timer_countdown1.Start();
                 turn(ON_LED1);
                 showImage(ON_LED1);
-            } else
+                lbl_countdownSeconds1.Text = countdown_seconds1.ToString();
+            } else if (rb_countdownOFF1.Checked && countdown_seconds1 != 0)
             {
+                txtbox_countdownTime1.Enabled = false;
+                timer_countdown1.Start();
                 turn(OFF_LED1);
                 showImage(OFF_LED1);
+                lbl_countdownSeconds1.Text = countdown_seconds1.ToString();
             }
-            lbl_countdownSeconds1.Text = countdown_seconds1.ToString();
         }
 
         private void timer_countdown1_Tick(object sender, EventArgs e)
@@ -319,7 +329,7 @@ namespace LightsControlSystemFiveLED
                 {
                     turn(OFF_LED1);
                     showImage(OFF_LED1);
-                } else
+                } else if (rb_countdownOFF1.Checked)
                 {
                     turn(ON_LED1);
                     showImage(ON_LED1);
@@ -333,12 +343,31 @@ namespace LightsControlSystemFiveLED
         private void btn_countdownReset1_Click(object sender, EventArgs e)
         {
             txtbox_countdownTime1.Enabled = true;
-            turn(OFF_LED1);
-            showImage(OFF_LED1);
+            if (rb_countdownON1.Checked)
+            {
+                turn(OFF_LED1);
+                showImage(OFF_LED1);
+            } else if (rb_countdownOFF1.Checked)
+            {
+                turn(ON_LED1);
+                showImage(ON_LED1);
+            }
+            
             timer_countdown1.Stop();
             countdown_seconds1 = 0;
             lbl_countdownSeconds1.Text = countdown_seconds1.ToString();
 
+        }
+
+        // Countdown enter key handler
+        private void txtbox_countdownTime1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.Return))
+            {
+                btn_countdownStart1.PerformClick();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+            }
         }
 
         // date and time control
@@ -362,7 +391,7 @@ namespace LightsControlSystemFiveLED
                     {
                         turn(ON_LED1);
                         showImage(ON_LED1);
-                    } else
+                    } else if (rb_dateTimeOFF1.Checked)
                     {
                         turn(OFF_LED1);
                         showImage(OFF_LED1);
@@ -379,7 +408,7 @@ namespace LightsControlSystemFiveLED
                         turn(OFF_LED1);
                         showImage(OFF_LED1);
                     }
-                    else
+                    else if (rb_dateTimeOFF1.Checked)
                     {
                         turn(ON_LED1);
                         showImage(ON_LED1);
@@ -395,8 +424,15 @@ namespace LightsControlSystemFiveLED
         {
             timer_dateTime1.Stop();
             dateTimeSelectionControls(ON_LED1, true);
-            turn(OFF_LED1);
-            showImage(OFF_LED1);
+            if (rb_dateTimeON1.Checked)
+            {
+                turn(OFF_LED1);
+                showImage(OFF_LED1);
+            } else if (rb_dateTimeOFF1.Checked)
+            {
+                turn(ON_LED1);
+                showImage(ON_LED1);
+            }
             dateTime_start1 = false;
         }
 
