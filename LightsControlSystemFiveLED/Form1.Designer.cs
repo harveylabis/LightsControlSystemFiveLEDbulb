@@ -801,6 +801,7 @@
             this.txtbox_countdownTime2.Name = "txtbox_countdownTime2";
             this.txtbox_countdownTime2.Size = new System.Drawing.Size(50, 20);
             this.txtbox_countdownTime2.TabIndex = 5;
+            this.txtbox_countdownTime2.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtbox_countdownTime2_KeyDown);
             // 
             // btn_countdownReset2
             // 
